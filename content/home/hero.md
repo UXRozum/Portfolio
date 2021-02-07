@@ -1,6 +1,7 @@
 ---
 widget: hero
 headless: true
+active: false
 weight: 10
 title: Rozum Sergey
 hero_media: hero-academic.png
