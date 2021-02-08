@@ -85,7 +85,7 @@ Mostly I have been:
     location: Moscow, Russia
     date_start: '2016-04-01'
     date_end: '2016-10-01'
-    description: "Responsabilities:
+    description: "Responsibilities:
 
 * monitoring studies
 
