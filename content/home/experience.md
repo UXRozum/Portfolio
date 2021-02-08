@@ -25,18 +25,73 @@ experience:
   - title: Head of UX-Reseasch
     company: Sberbank
     company_url: ''
-    location: California
+    location: Moscow, Russia
     date_start: '2019-09-05'
     date_end: ''
     description: "As a Head of UX-Research at Sberbank's 'Business Products' cluster, I am doing the research of b2b products (mostly Cust Dev, Design Thinking, in-person & remote UX Testing, sometimes ethnography or diary studies) Part of my responsibilities is coordination of research process (speaking with internal customers, consulting and couching other researchers and product owners, organization of knowledge base). 
+    
+    
     Came up with 'Methodology as a Service' thing - if product owners or designers want to do research by themselves, I help them to find a suitable methodology, and support them in every phase of the study. 
+    
+    
     Made methodology for expert evaluation of Voice User Interfaces."
         
-  - title: Professor
-    company: University X
+  - title: Lead UX-Researcher
+    company: MTS Group
     company_url: ''
-    location: California
-    date_start: '2016-01-01'
-    date_end: '2016-12-31'
-    description: Taught electronic engineering and researched semiconductor physics.
+    location: Moscow, Russia
+    date_start: '2018-11-03'
+    date_end: '2019-09-04'
+    description: " My responsibilities as a lead UX-Researcher:
+    
+    * Conducting UX-studies, cust dev sessions, in-depth interviews
+    
+    * Establishing a lean research process
+    
+    * Instructing researchers, product owners, and designers
+    
+    * Development of research templates, regulations, methodology
+    
+    * Testing and putting into operation of new methodologies
+    
+    * Lecturing in the corporate university"
+    
+  - title: Usability Analyst
+    company: Usability Factory (Fabuza)
+    company_url: ''
+    location: Moscow, Russia
+    date_start: '2016-11-01'
+    date_end: '2018-11-02'
+    description: "Usability Factory is a software company that makes remote UX-test software
+and works as an agency (doing research on their own platform).
+
+Mostly I have been:
+
+* Conducting remote usability-studies
+
+* Hypothesis formulation
+
+* Writing scenarios for UX-test sessions
+
+* Cleaning and analyzing data from tests
+
+* Writing study reports
+
+* Reporting study results to clients"
+
+  - title: Assistant in Department of Monitoring and Electoral Research
+    company: VCIOM
+    company_url: ''
+    location: Moscow, Russia
+    date_start: '2016-04-01'
+    date_end: '2016-10-01'
+    description: "Responsabilities:
+
+* monitoring studies
+
+* social and electoral analytics
+
+* questionnaire design
+
+* analytical report writing"
 ---

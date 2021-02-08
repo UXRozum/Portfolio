@@ -2,16 +2,16 @@
 bio: 
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
+  - course: Master's degree in Sociology
+    institution: Higher School of Economics
+    year: 2018
+  - course: Bachelor's degree in Sociology 
+    institution: Moscow State University of Transport (MIIT)
+    year: 2016
   - course: BSc in Artificial Intelligence
     institution: Massachusetts Institute of Technology
     year: 2008
-email: ""
+email: "keshtelmek@gmail.com"
 highlight_name: false
 interests:
 - UX-research
@@ -22,10 +22,13 @@ role: UX-researcher and strategist
 social:
 - icon: envelope
   icon_pack: fas
-  link: /#contact
+  link: mailto:keshtelmek@gmail.com
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/
+- icon: facebook
+  icon_pack: fab
+  link: https://www.facebook.com/profile.php?id=100015500257909
 superuser: true
 title: Rozum Sergey
 ---
