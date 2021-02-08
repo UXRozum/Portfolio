@@ -22,18 +22,15 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: CEO
-    company: GenCoin
+  - title: Head of UX-Reseasch
+    company: Sberbank
     company_url: ''
     location: California
-    date_start: '2017-01-01'
+    date_start: '2019-09-05'
     date_end: ''
-    description: |2-
-        Responsibilities include:
-        
-        * Analysing
-        * Modelling
-        * Deploying
+    description: As a Head of UX-Research at Sberbank's "Business Products" cluster, I am doing the research of b2b products (mostly Cust Dev, Design Thinking, in-person & remote UX Testing, sometimes ethnography or diary studies) Part of my responsibilities is coordination of research process (speaking with internal customers, consulting and couching other researchers and product owners, organization of knowledge base). 
+    Came up with "Methodology as a Service" thing - if product owners or designers want to do research by themselves, I help them to find a suitable methodology, and support them in every phase of the study. 
+    Made methodology for expert evaluation of Voice User Interfaces.
         
   - title: Professor
     company: University X
