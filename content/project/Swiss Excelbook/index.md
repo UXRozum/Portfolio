@@ -4,8 +4,6 @@ external_link: ""
 image:
   caption: 
   focal_point: Smart
-
-  url: https://twitter.com/georgecushen
 slides: 
 summary: One file to calculate multiple popular indexes
 tags:

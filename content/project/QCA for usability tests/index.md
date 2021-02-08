@@ -6,7 +6,7 @@ image:
   focal_point: Smart
 links:
 slides: 
-summary: "Getting your priorities right: using Qualitative Comparative Analysis for usability problems prioritization."
+summary: "Using Qualitative Comparative Analysis for usability problems prioritization."
 tags:
 - Qalitative Comparative Analysis
 - Usability Analytics
