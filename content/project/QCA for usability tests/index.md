@@ -1,14 +1,15 @@
 ---
-date: ""
+date: "2021-02-08"
 external_link: ""
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: 
   focal_point: Smart
 links:
 slides: 
 summary: "Getting your priorities right: using Qualitative Comparative Analysis for usability problems prioritization."
 tags:
-- Deep Learning
+- Qalitative Comparative Analysis
+- Usability Analytics
 title: QCA for usability tests
 url_code: ""
 url_pdf: ""

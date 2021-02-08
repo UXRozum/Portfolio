@@ -1,7 +1,7 @@
 theme: starter-academic
 title: Rozum S, UXR
 baseurl: ''
-copyright: ''
+copyright: '{year}'
 enableGitInfo: no
 defaultContentLanguage: en
 hasCJKLanguage: no
