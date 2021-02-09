@@ -17,6 +17,7 @@ interests:
 - UX-research
 - Research ops
 - Data visualisation
+- test
 
 role: UX-researcher and strategist
 social:
