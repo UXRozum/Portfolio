@@ -6,11 +6,12 @@ image:
   focal_point: Smart
 links:
 slides: 
-summary: "Using Qualitative Comparative Analysis for usability problems prioritization."
+summary: "Car shopping done excessively"
 tags:
-- Qualitative Comparative Analysis
+- Unmoderated remote usability test
 - Usability Analytics
-title: QCA for usability tests
+- Informational structure
+title: Usability test of online car shop
 url_code: ""
 url_pdf: ""
 url_slides: ""
