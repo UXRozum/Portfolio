@@ -8,9 +8,7 @@ education:
   - course: Bachelor's degree in Sociology 
     institution: Moscow State University of Transport (MIIT)
     year: 2016
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+
 email: "keshtelmek@gmail.com"
 highlight_name: false
 interests:
@@ -22,7 +20,7 @@ role: UX-researcher and strategist
 social:
 - icon: envelope
   icon_pack: fas
-  link: mailto:keshtelmek@gmail.com
+  link: mailto:mail@uxrozum.com
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/
@@ -38,4 +36,4 @@ I am a ux-researcher with wide experience in different types of research. I have
 
 I love coming up with new methodological cadavers for more efficient research. Also, I'm obsessed with data visualization and know what data/ink ratio is.
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/sergey_rozum_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.

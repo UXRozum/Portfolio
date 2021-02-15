@@ -24,7 +24,7 @@ date_format: Jan 2006
 experience:
   - title: Head of UX-Reseasch
     company: Sberbank
-    company_url: ''
+    company_url: 'https://www.sberbank.com/about'
     location: Moscow, Russia
     date_start: '2019-09-05'
     date_end: ''
@@ -38,7 +38,7 @@ experience:
         
   - title: Lead UX-Researcher
     company: MTS Group
-    company_url: ''
+    company_url: 'http://ir.mts.ru/home/default.aspx'
     location: Moscow, Russia
     date_start: '2018-11-03'
     date_end: '2019-09-04'
@@ -58,20 +58,21 @@ experience:
     
   - title: Usability Analyst
     company: Usability Factory (Fabuza)
-    company_url: ''
+    company_url: 'https://fabuza.com/'
     location: Moscow, Russia
     date_start: '2016-11-01'
     date_end: '2018-11-02'
-    description: "Usability Factory is a software company that makes remote UX-test software
+    description: "Usability Factory is a software company that makes remote usability test software
 and works as an agency (doing research on their own platform).
+
 
 Mostly I have been:
 
-* Conducting remote usability-studies
+* Conducting remote usability studies
 
 * Hypothesis formulation
 
-* Writing scenarios for UX-test sessions
+* Writing scenarios for usability test sessions
 
 * Cleaning and analyzing data from tests
 
@@ -80,18 +81,18 @@ Mostly I have been:
 * Reporting study results to clients"
 
   - title: Assistant in Department of Monitoring and Electoral Research
-    company: VCIOM
-    company_url: ''
+    company: WCIOM - RUSSIAN PUBLIC OPINION RESEARCH CENTER
+    company_url: 'https://wciom.com/'
     location: Moscow, Russia
     date_start: '2016-04-01'
     date_end: '2016-10-01'
     description: "Responsibilities:
 
-* monitoring studies
+* Monitoring studies
 
-* social and electoral analytics
+* Social and electoral analytics
 
-* questionnaire design
+* Questionnaire design
 
-* analytical report writing"
+* Analytical report writing"
 ---
