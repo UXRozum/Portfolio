@@ -12,6 +12,8 @@ tags:
 - Usability Analytics
 - UMUX-Lite
 - Kano
+- NPS
+- CSI
 title: Swiss army research excelbook
 url_code: ""
 url_pdf: ""
@@ -47,6 +49,6 @@ What calculators are already available
  
 * **CSI** - for calculating the Customer Satisfaction Index
 
-* **PSM** - to assess the price sensitivity of Van Westendorp
+* **PSM** - to assess the price sensitivity according to van Westendorp
 
 You can download my Swiss Excelbook [here](/Swiss_Excelbook_V0.1b.xlsx)!
