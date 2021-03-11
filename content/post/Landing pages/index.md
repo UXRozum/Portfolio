@@ -1,5 +1,5 @@
 ---
-date: "2021-02-08"
+date: "2021-02-10"
 external_link: ""
 image:
   caption: 
@@ -8,8 +8,9 @@ links:
 slides: 
 summary: ""
 tags:
-- Qualitative Comparative Analysis
+- Remote usability tests
 - Usability Analytics
+- Comparative research design
 title: Competitive usability test of three landing pages
 url_code: ""
 url_pdf: ""
@@ -17,8 +18,12 @@ url_slides: ""
 url_video: ""
 ---
 
+ ## About project
  
- The company had several landings for the sale of services, its own and partners'. Both types of landing pages contain the same services at the same prices. Even so, partner's landing pages had two times more conversion rates than the company's landings. And it was necessary to find the reason for this difference.
+ The company had several landings for the sale of services, its own and partners'. Both types of landing pages contain the same services at the same prices. Even so, partner's landing pages had two times more conversion rates than the company's landings. And it was necessary to find the reason for this difference. As a lead ux-researcher, I was doing this project solo.
+
+ ## My work
+
 I had two major assumptions:
 
 1. It is a behavioral difference - people, who see compare several providers using third party partner's pages, are more likely to make target action. They already saw all offers.
@@ -29,6 +34,8 @@ The second assumption was more effortless to test, so I've settled up with compa
 I made six groups of respondents - two regions and three types of pages. The scenario was mostly identical, except for test data. The target action was to send a request for service. And the process of sending a request contains validation of the customer's home address. For one region, I found the simple address ( i.e., Lenin Street, 25). For the second region, the test address was more complicated (i.e., Zhukov Boulevard, 36). 
 
 The process was quite normal - using Usability Factory software, I made several tasks for each group, sent them to respondents, got data, and started the analysis.
+ 
+ ## Result
 
 The difference in metrics was quite drastic. But it wasn't the difference between partner's and company's landings. The company's landing page got remarkably more SUM score difference between two types of test address than partner's. And between SUM metrics, the effectiveness shows the most difference.
 
@@ -41,6 +48,8 @@ So, it is not only easy to make a mistake. Also, you don't know that there is a 
 But, this behavior is identical for both company's and partners' landing pages. It couldn't be the causal factor of the difference in SUM. 
 And now I want to talk not only about the mechanical behavior of the system. The main difference lies in one tiny detail, which shows the whole nature of the customer experience. 
 Partners' landing pages allow a user to request a service even with an address, that was wrong from the system's point of view. The company's landing page shows the advertisement of the other service. 
+
+ ## Reflection
 
 To let people send the form with the wrong address maybe just a lack of QA. And yes, it's more logical and right to make the proper error message or make the more understanding address validator. 
 
