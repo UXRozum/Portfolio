@@ -17,7 +17,8 @@ url_slides: ""
 url_video: ""
 ---
 
-he company had several landings for the sale of services, its own and partners'. Both types of landing pages contain the same services at the same prices. Even so, partner's landing pages had two times more conversion rates than the company's landings. And it was necessary to find the reason for this difference.
+ 
+ The company had several landings for the sale of services, its own and partners'. Both types of landing pages contain the same services at the same prices. Even so, partner's landing pages had two times more conversion rates than the company's landings. And it was necessary to find the reason for this difference.
 I had two major assumptions:
 
 1. It is a behavioral difference - people, who see compare several providers using third party partner's pages, are more likely to make target action. They already saw all offers.
@@ -29,7 +30,8 @@ I made six groups of respondents - two regions and three types of pages. The sce
 
 The process was quite normal - using Usability Factory software, I made several tasks for each group, sent them to respondents, got data, and started the analysis.
 
-The difference in metrics was quite drastic. But it wasn't the difference between partner's and company's landings. The company's landing page got remarkably more SUM score difference between two types of test address than partner's. And between SUM metrics, the effectiveness shows the most difference. 
+The difference in metrics was quite drastic. But it wasn't the difference between partner's and company's landings. The company's landing page got remarkably more SUM score difference between two types of test address than partner's. And between SUM metrics, the effectiveness shows the most difference.
+
 Further analysis showed that the main reason for this difference was the behavior of the address validation form. And the more complicated address, the more evident was the issue. 
 The form just didn't let a customer use any abbreviations of the word except one right abbreviation. For example, the only correct abbreviation for "Boulevard" is "Bl-vd". It's quite an uncommon abbreviation.
 
