@@ -9,7 +9,7 @@ education:
     institution: Moscow State University of Transport (MIIT)
     year: 2016
 
-email: "keshtelmek@gmail.com"
+email: "mail@uxrozum.com"
 highlight_name: false
 interests:
 - UX-research
@@ -36,4 +36,4 @@ I am a ux-researcher with wide experience in different types of research. I have
 
 I love coming up with new methodological cadavers for more efficient research. Also, I'm obsessed with data visualization and know what data/ink ratio is.
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/sergey_rozum_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/Resume-Sergey-Rozum.pdf" "newtab" >}}resumé{{< /staticref >}}.

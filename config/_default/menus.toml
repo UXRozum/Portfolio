@@ -9,18 +9,18 @@
   weight = 10
 
 [[main]]
-  name = "Cases"
+  name = "Cases studies"
   url = "#posts"
   weight = 20
 
 [[main]]
-  name = "Projects"
+  name = "Articles"
   url = "#projects"
   weight = 30
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/media/resume.pdf` and uncomment the lines below.
  [[main]]
-#    name = "CV"
-#    url = "media/resume.pdf"
-#    weight = 70
+ name = "CV"
+url = "media/Resume-Sergey-Rozum.pdf"
+weight = 70

@@ -6,7 +6,7 @@ image:
   focal_point: Smart
 links:
 slides: 
-summary: ""
+summary: "Interesting case for unmoderated usability-test"
 tags:
 - Remote usability tests
 - Usability Analytics

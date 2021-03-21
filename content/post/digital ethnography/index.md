@@ -6,7 +6,7 @@ image:
   focal_point: Smart
 links:
 slides: 
-summary: "Most efficient way to make processual interviews"
+summary: "Desktop research sold right"
 tags:
 - Generative research
 - Observation methods
