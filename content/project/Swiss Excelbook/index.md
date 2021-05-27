@@ -27,7 +27,7 @@ And it is hard to keep everything under control. You have to dig through your fi
 
 To put this matter in order a little and make life easier for those colleagues who do not want to re-enter the necessary formulas into Excel every time, I decided to collect calculators for those indexes that I often calculate in one excel file.
 
-I present to your attention the [Swiss Army Research Excelbook](/Swiss_Excelbook_V0.1b.xlsx). It contains methods for calculating most common indexes. Ideally, it should be as versatile as a Swiss army knife, so in the future I will supplement the methods and refine available calculators. In the meantime, meet beta.
+I present to your attention the [Swiss Army Research Excelbook](https://github.com/UXRozum/Swiss_Excelbook). It contains methods for calculating most common indexes. Ideally, it should be as versatile as a Swiss army knife, so in the future I will supplement the methods and refine available calculators. In the meantime, meet beta.
 
 #### How does it work?
 
@@ -51,4 +51,4 @@ What calculators are already available
 
 * **PSM** - to assess the price sensitivity according to van Westendorp
 
-You can download my Swiss Excelbook [here](/Swiss_Excelbook_V0.1b.xlsx)!
+You can download my Swiss Excelbook [here](https://github.com/UXRozum/Swiss_Excelbook)!
