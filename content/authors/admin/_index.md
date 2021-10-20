@@ -23,7 +23,7 @@ social:
   link: mailto:mail@uxrozum.com
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/
+  link: https://www.linkedin.com/in/sergey-rozum/
 - icon: facebook
   icon_pack: fab
   link: https://www.facebook.com/profile.php?id=100015500257909
