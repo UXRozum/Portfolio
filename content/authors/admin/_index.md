@@ -30,10 +30,10 @@ social:
 superuser: true
 title: Rozum Sergey
 ---
-Hi! My name is Rozum Sergey, and this is my portfolio. 
+I'm Rozum Sergey, a UX researcher passionate about understanding people and their experiences. Welcome to my portfolio!
 
-I am a ux-researcher with wide experience in different types of research. I have worked on marketing, political, and user experience studies.
+In my journey, I've explored diverse research fields, including marketing, politics, and user experience. I enjoy crafting creative research approaches that make our work more effective. I'm also a bit of a data visualization enthusiast—I love turning data into meaningful stories.
 
-I love coming up with new methodological cadavers for more efficient research. Also, I'm obsessed with data visualization and know what data/ink ratio is.
+Thanks for stopping by and getting to know a bit about me. Feel free to explore my work and reach out if you have any questions.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/Resume-Sergey-Rozum.pdf" "newtab" >}}resumé{{< /staticref >}}.
