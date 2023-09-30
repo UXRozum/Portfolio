@@ -90,7 +90,7 @@ show_related = {book = true, page = false, post = false, project = false, public
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "keshtelmek@gmail.com"
+email = "mail@uxrozum.com"
 phone = "8 999 990 51 76"
 
 # Address
