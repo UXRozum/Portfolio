@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Remote usability tests | Rozum S, UXR</title>
+    <link>/tag/remote-usability-tests/</link>
+      <atom:link href="/tag/remote-usability-tests/index.xml" rel="self" type="application/rss+xml" />
+    <description>Remote usability tests</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>2025</copyright><lastBuildDate>Wed, 10 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu449a538eeebba9d4c918dd87510d1479_14176_512x512_fill_lanczos_center_2.png</url>
+      <title>Remote usability tests</title>
+      <link>/tag/remote-usability-tests/</link>
+    </image>
+    
+    <item>
+      <title>Competitive usability test of three landing pages</title>
+      <link>/post/landing-pages/</link>
+      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>/post/landing-pages/</guid>
+      <description>&lt;h2 id=&#34;about-project&#34;&gt;About project&lt;/h2&gt;
+&lt;p&gt;The company had several landings for the sale of services, its own and partners&#39;. Both types of landing pages contain the same services at the same prices. Even so, partner&amp;rsquo;s landing pages had two times more conversion rates than the company&amp;rsquo;s landings. And it was necessary to find the reason for this difference. As a lead ux-researcher, I was doing this project solo.&lt;/p&gt;
+&lt;h2 id=&#34;my-work&#34;&gt;My work&lt;/h2&gt;
+&lt;p&gt;I had two major assumptions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;It is a behavioral difference - people, who see compare several providers using third party partner&amp;rsquo;s pages, are more likely to make target action. They already saw all offers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It&amp;rsquo;s usability issues - it&amp;rsquo;s harder to make target action on company landing pages.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The second assumption was more effortless to test, so I&amp;rsquo;ve settled up with comparative unmoderated remote usability tests in several regions. 
+I made six groups of respondents - two regions and three types of pages. The scenario was mostly identical, except for test data. The target action was to send a request for service. And the process of sending a request contains validation of the customer&amp;rsquo;s home address. For one region, I found the simple address ( i.e., Lenin Street, 25). For the second region, the test address was more complicated (i.e., Zhukov Boulevard, 36).&lt;/p&gt;
+&lt;p&gt;The process was quite normal - using Usability Factory software, I made several tasks for each group, sent them to respondents, got data, and started the analysis.&lt;/p&gt;
+&lt;h2 id=&#34;result&#34;&gt;Result&lt;/h2&gt;
+&lt;p&gt;The difference in metrics was quite drastic. But it wasn&amp;rsquo;t the difference between partner&amp;rsquo;s and company&amp;rsquo;s landings. The company&amp;rsquo;s landing page got remarkably more SUM score difference between two types of test address than partner&amp;rsquo;s. And between SUM metrics, the effectiveness shows the most difference.&lt;/p&gt;
+&lt;p&gt;Further analysis showed that the main reason for this difference was the behavior of the address validation form. And the more complicated address, the more evident was the issue.&lt;/p&gt;
+&lt;p&gt;The form just didn&amp;rsquo;t let a customer use any abbreviations of the word except one right abbreviation. For example, the only correct abbreviation for &amp;ldquo;Boulevard&amp;rdquo; is &amp;ldquo;Bl-vd&amp;rdquo;. It&amp;rsquo;s quite an uncommon abbreviation.
+&lt;img src=&#34;1.gif&#34; alt=&#34;Adress issues&#34; title=&#34;Address issues&#34;&gt;&lt;/p&gt;
+&lt;p&gt;It wouldn&amp;rsquo;t be a critical issue, but weird behavior continues. The user doesn&amp;rsquo;t see a &amp;ldquo;Wrong address&amp;rdquo; type of error. The system shows the &amp;ldquo;You can&amp;rsquo;t get service at this address&amp;rdquo; error. 
+So, it is not only easy to make a mistake. Also, you don&amp;rsquo;t know that there is a mistake.&lt;/p&gt;
+&lt;p&gt;But, this behavior is identical for both company&amp;rsquo;s and partners&#39; landing pages. It couldn&amp;rsquo;t be the causal factor of the difference in SUM. 
+And now I want to talk not only about the mechanical behavior of the system. The main difference lies in one tiny detail, which shows the whole nature of the customer experience. 
+&lt;img src=&#34;2.gif&#34; alt=&#34;Submit button&#34; title=&#34;Submit button&#34;&gt;
+Partners&#39; landing pages allow a user to request a service even with an address, that was wrong from the system&amp;rsquo;s point of view. The company&amp;rsquo;s landing page shows the advertisement of the other service.&lt;/p&gt;
+&lt;h2 id=&#34;reflection&#34;&gt;Reflection&lt;/h2&gt;
+&lt;p&gt;To let people send the form with the wrong address maybe just a lack of QA. And yes, it&amp;rsquo;s more logical and right to make the proper error message or make the more understanding address validator.&lt;/p&gt;
+&lt;p&gt;But even if this small thing is a mistake, it makes the form that is much more usable than the more technically proper form on the company&amp;rsquo;s landing page.&lt;/p&gt;
+&lt;p&gt;I love this case not only because it shows my skills in usability analytics. Also because it shows how much some minute trifles in usability could affect the whole product.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

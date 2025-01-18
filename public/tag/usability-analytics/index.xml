@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Usability Analytics | Rozum S, UXR</title>
+    <link>/tag/usability-analytics/</link>
+      <atom:link href="/tag/usability-analytics/index.xml" rel="self" type="application/rss+xml" />
+    <description>Usability Analytics</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>2025</copyright><lastBuildDate>Tue, 09 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu449a538eeebba9d4c918dd87510d1479_14176_512x512_fill_lanczos_center_2.png</url>
+      <title>Usability Analytics</title>
+      <link>/tag/usability-analytics/</link>
+    </image>
+    
+    <item>
+      <title>Swiss army research excelbook</title>
+      <link>/project/swiss-excelbook/</link>
+      <pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>/project/swiss-excelbook/</guid>
+      <description>&lt;p&gt;I often come across the need to count certain indexes in my work. For some of the indexes, you can find calculators (excel files where you can enter the source data and quickly get the desired index). For some of them, there are not.&lt;/p&gt;
+&lt;p&gt;And it is hard to keep everything under control. You have to dig through your files every time, remember in which excel you made calculations, remember where you left the right calculator last time.&lt;/p&gt;
+&lt;p&gt;To put this matter in order a little and make life easier for those colleagues who do not want to re-enter the necessary formulas into Excel every time, I decided to collect calculators for those indexes that I often calculate in one excel file.&lt;/p&gt;
+&lt;p&gt;I present to your attention the &lt;a href=&#34;https://github.com/UXRozum/Swiss_Excelbook&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Swiss Army Research Excelbook&lt;/a&gt;. It contains methods for calculating most common indexes. Ideally, it should be as versatile as a Swiss army knife, so in the future I will supplement the methods and refine available calculators.&lt;/p&gt;
+&lt;h3 id=&#34;features&#34;&gt;Features&lt;/h3&gt;
+&lt;h2 id=&#34;easy-calsulation-of-metrics&#34;&gt;Easy calsulation of metrics&lt;/h2&gt;
+&lt;p&gt;Just past raw data (answers, or answer codes), and Swiss Excelbook will calculate metrics&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;SUM.gif&#34; alt=&#34;using SRE&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tons-of-different-metrics&#34;&gt;Tons of different metrics&lt;/h2&gt;
+&lt;p&gt;What calculators are already available&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SUM (Single Usability Metric)&lt;/strong&gt; - a single metric for measuring usability&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;UMUX (Usability Metric for User Experience)&lt;/strong&gt; - a questionnaire for measuring the usability of a product&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;CES (Customer Effort Score)&lt;/strong&gt; - assessment of the complexity of a particular action&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;NPS (Net Promoter Score)&lt;/strong&gt; - measures the loyalty of customers to a company&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;CSI (Customer Satisfaction Score)&lt;/strong&gt; - the index of satisfaction with the product&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ODI (Outcome Driven Innovation)&lt;/strong&gt; - determining the significance of the job statement within the jtbd and the outcome driven innovation approach (Ulvik approach)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Kano model&lt;/strong&gt; - proiritize features on a product roadmap&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;PSM (Price Sensitivity Meter)&lt;/strong&gt; - four questions to identify the optimal product price&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;plots-for-every-metric&#34;&gt;Plots for every metric&lt;/h2&gt;
+&lt;p&gt;Every calculated metric has a plot for study presentation&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;CSI.gif&#34; alt=&#34;Plots&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;benchmarks&#34;&gt;Benchmarks&lt;/h2&gt;
+&lt;p&gt;For some metrics there are benchmarks for ease of analysis&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;SUS.gif&#34; alt=&#34;Benchmarks&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;how-does-it-work&#34;&gt;How does it work?&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Download file&lt;/li&gt;
+&lt;li&gt;Select the appropriate tab&lt;/li&gt;
+&lt;li&gt;Insert the cleaned raw data there&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The file itself has detailed instructions on what you can and can&amp;rsquo;t touch, how the raw data should look like, and some tips on using the indexes themselves&lt;/p&gt;
+&lt;p&gt;You can download my Swiss Excelbook &lt;a href=&#34;https://github.com/UXRozum/Swiss_Excelbook&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Competitive usability test of three landing pages</title>
+      <link>/post/landing-pages/</link>
+      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>/post/landing-pages/</guid>
+      <description>&lt;h2 id=&#34;about-project&#34;&gt;About project&lt;/h2&gt;
+&lt;p&gt;The company had several landings for the sale of services, its own and partners&#39;. Both types of landing pages contain the same services at the same prices. Even so, partner&amp;rsquo;s landing pages had two times more conversion rates than the company&amp;rsquo;s landings. And it was necessary to find the reason for this difference. As a lead ux-researcher, I was doing this project solo.&lt;/p&gt;
+&lt;h2 id=&#34;my-work&#34;&gt;My work&lt;/h2&gt;
+&lt;p&gt;I had two major assumptions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;It is a behavioral difference - people, who see compare several providers using third party partner&amp;rsquo;s pages, are more likely to make target action. They already saw all offers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It&amp;rsquo;s usability issues - it&amp;rsquo;s harder to make target action on company landing pages.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The second assumption was more effortless to test, so I&amp;rsquo;ve settled up with comparative unmoderated remote usability tests in several regions. 
+I made six groups of respondents - two regions and three types of pages. The scenario was mostly identical, except for test data. The target action was to send a request for service. And the process of sending a request contains validation of the customer&amp;rsquo;s home address. For one region, I found the simple address ( i.e., Lenin Street, 25). For the second region, the test address was more complicated (i.e., Zhukov Boulevard, 36).&lt;/p&gt;
+&lt;p&gt;The process was quite normal - using Usability Factory software, I made several tasks for each group, sent them to respondents, got data, and started the analysis.&lt;/p&gt;
+&lt;h2 id=&#34;result&#34;&gt;Result&lt;/h2&gt;
+&lt;p&gt;The difference in metrics was quite drastic. But it wasn&amp;rsquo;t the difference between partner&amp;rsquo;s and company&amp;rsquo;s landings. The company&amp;rsquo;s landing page got remarkably more SUM score difference between two types of test address than partner&amp;rsquo;s. And between SUM metrics, the effectiveness shows the most difference.&lt;/p&gt;
+&lt;p&gt;Further analysis showed that the main reason for this difference was the behavior of the address validation form. And the more complicated address, the more evident was the issue.&lt;/p&gt;
+&lt;p&gt;The form just didn&amp;rsquo;t let a customer use any abbreviations of the word except one right abbreviation. For example, the only correct abbreviation for &amp;ldquo;Boulevard&amp;rdquo; is &amp;ldquo;Bl-vd&amp;rdquo;. It&amp;rsquo;s quite an uncommon abbreviation.
+&lt;img src=&#34;1.gif&#34; alt=&#34;Adress issues&#34; title=&#34;Address issues&#34;&gt;&lt;/p&gt;
+&lt;p&gt;It wouldn&amp;rsquo;t be a critical issue, but weird behavior continues. The user doesn&amp;rsquo;t see a &amp;ldquo;Wrong address&amp;rdquo; type of error. The system shows the &amp;ldquo;You can&amp;rsquo;t get service at this address&amp;rdquo; error. 
+So, it is not only easy to make a mistake. Also, you don&amp;rsquo;t know that there is a mistake.&lt;/p&gt;
+&lt;p&gt;But, this behavior is identical for both company&amp;rsquo;s and partners&#39; landing pages. It couldn&amp;rsquo;t be the causal factor of the difference in SUM. 
+And now I want to talk not only about the mechanical behavior of the system. The main difference lies in one tiny detail, which shows the whole nature of the customer experience. 
+&lt;img src=&#34;2.gif&#34; alt=&#34;Submit button&#34; title=&#34;Submit button&#34;&gt;
+Partners&#39; landing pages allow a user to request a service even with an address, that was wrong from the system&amp;rsquo;s point of view. The company&amp;rsquo;s landing page shows the advertisement of the other service.&lt;/p&gt;
+&lt;h2 id=&#34;reflection&#34;&gt;Reflection&lt;/h2&gt;
+&lt;p&gt;To let people send the form with the wrong address maybe just a lack of QA. And yes, it&amp;rsquo;s more logical and right to make the proper error message or make the more understanding address validator.&lt;/p&gt;
+&lt;p&gt;But even if this small thing is a mistake, it makes the form that is much more usable than the more technically proper form on the company&amp;rsquo;s landing page.&lt;/p&gt;
+&lt;p&gt;I love this case not only because it shows my skills in usability analytics. Also because it shows how much some minute trifles in usability could affect the whole product.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>QCA for usability tests</title>
+      <link>/project/qca-for-usability-tests/</link>
+      <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>/project/qca-for-usability-tests/</guid>
+      <description>&lt;p&gt;&lt;em&gt;It looks like another Goldberg machine. But, in reality, this technique could serve as an additional source of truth. You can’t have too many factors when you have to decide which usability problems correct foremost. And also, most of the techniques to prioritize usability problems are subjective, it’s good to add some more objectivity there.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;what-is-qca&#34;&gt;What is QCA?&lt;/h2&gt;
+&lt;p&gt;As a method, QCA was made to work in cases, where the general population is too small to use quantitative methods. For example, where you want to determine which factors lead to the economic prosperity of a state. There are nearly 200 states on our planet, so it’s hard to find enough cases for a quantitative study.
+And here comes Qualitative Comparative Analysis on fancy Boolean algebra horse. This method helps us to estimate the causal strength of each factor. With this, we can say, &lt;strong&gt;which usability problem is most crucial to fix&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(This method matches better for remote unmoderated studies, where you can analyze more respondents. Not 5-10, but 10-20. And this is not a replacement for other methods to estimate critically for usability problems. It’s better to use them all).&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;basic-concepts-of-qca&#34;&gt;Basic concepts of QCA&lt;/h2&gt;
+&lt;p&gt;The base of this method is a deep understanding of cause-effect relations. In our case “Cause” is a usability problem and “Effect” is a success (or failure) of task completion. So, for every effect, there is a cause, and to describe the power of this relation we will use two measures — Necessity and Sufficiency.&lt;/p&gt;
+&lt;h4 id=&#34;necessity&#34;&gt;Necessity&lt;/h4&gt;
+&lt;p&gt;Necessity is the measure that shows how necessary cause for an effect.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Necessity.png&#34; alt=&#34;Necessity&#34; title=&#34;Necessity&#34;&gt; &lt;em&gt;In this picture we see the case of 100% necessity – there is no effect without this cause.&lt;/em&gt;&lt;/p&gt;
+&lt;h4 id=&#34;sufficiency&#34;&gt;Sufficiency&lt;/h4&gt;
+&lt;p&gt;Sufficiency shows us, at which extent causes enough to cause the effect.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Sufficiency.png&#34; alt=&#34;Sufficiency&#34; title=&#34;Sufficiency&#34;&gt; &lt;em&gt;In this picture we see 100% sufficiency – there is no cause without the effect.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;And so, 100% sufficiency and 100% necessity will give us 100% correlation:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Full_correlation.png&#34; alt=&#34;Full correlation&#34; title=&#34;Full correlation&#34;&gt; &lt;em&gt;It&amp;rsquo;s not 100% in this pic, just for you to understand the mechanism.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Playing with these two metrics we can make a synthetic index which we could use as a measure of the criticality of a usability problem:&lt;/p&gt;
+&lt;p&gt;CR =(NS+SF)/2&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;So, with 100% sufficiency and 100% necessity, we will have 100% critically.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To calculate these metrics we use truth tables (where each problem called &amp;ldquo;Factor&amp;rdquo;, as a possible cause).
+&lt;img src=&#34;Truth_table.png&#34; alt=&#34;Truth table&#34; title=&#34;Truth table&#34;&gt;&lt;/p&gt;
+&lt;p&gt;And for each factor we do separate tables:
+&lt;img src=&#34;Factor_table.png&#34; alt=&#34;Factor table&#34; title=&#34;Factor table&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A is the number of cases, where &lt;strong&gt;factor and effect are both presents&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;B is the number of cases, where &lt;strong&gt;factor is absent and effect is present&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;C is the number of cases, where &lt;strong&gt;factor is present and effect is absent&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;D is the number of cases where &lt;strong&gt;factor and effect are both absent&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So, Necessity (Nc) measure will be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NS = A(A+B)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And, Sufficiency (Sf)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SF = A/(A+C)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And, finally, our Criticality Index will be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CI = (Nc+Sf)/2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let’s watch these ideas on semi-real example! We have this one usability test protocol:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ex1.png&#34; alt=&#34;Example 1&#34; title=&#34;Example 1&#34;&gt;&lt;em&gt;Note, factors here are problems, and the effect is the failure (failed task)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;To test the Necessity and Sufficiency of each problem, we should count each A/B/C/D case:
+&lt;img src=&#34;ex2.png&#34; alt=&#34;Example 2&#34; title=&#34;Example 2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;And after this we could easily calculate all metrics using our formulas:
+&lt;img src=&#34;ex3.png&#34; alt=&#34;Example 3&#34; title=&#34;Example 3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As we see, Problem 3 got the highest critical score, which means that correcting this problem will get us the highest benefit.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;And with this, we got on our hands another criticality evaluation method, which could help us to improve our backlog prioritization. We just barely touched the surface of QCA, so this field is untilled. And I would be really glad if anyone wants to dig deeper, there are tons of methodological treasures looking for their discoverer!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

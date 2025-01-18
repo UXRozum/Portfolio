@@ -1,0 +1,18 @@
+{
+  "name": "Rozum S, UXR",
+  "short_name": "Rozum S, UXR",
+  "lang": "en-us",
+  "theme_color": "#7FBBA0",
+  "background_color": "#7FBBA0",
+  "icons": [{
+    "src": "/images/icon_hu449a538eeebba9d4c918dd87510d1479_14176_192x192_fill_lanczos_center_2.png",
+    "sizes": "192x192",
+    "type": "image/png"
+    }, {
+    "src": "/images/icon_hu449a538eeebba9d4c918dd87510d1479_14176_512x512_fill_lanczos_center_2.png",
+    "sizes": "512x512",
+    "type": "image/png"
+     }],
+  "display": "standalone",
+  "start_url": "/?utm_source=web_app_manifest"
+}

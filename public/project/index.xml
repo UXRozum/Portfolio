@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Rozum S, UXR</title>
+    <link>/project/</link>
+      <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>2025</copyright><lastBuildDate>Tue, 09 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu449a538eeebba9d4c918dd87510d1479_14176_512x512_fill_lanczos_center_2.png</url>
+      <title>Projects</title>
+      <link>/project/</link>
+    </image>
+    
+    <item>
+      <title>Swiss army research excelbook</title>
+      <link>/project/swiss-excelbook/</link>
+      <pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>/project/swiss-excelbook/</guid>
+      <description>&lt;p&gt;I often come across the need to count certain indexes in my work. For some of the indexes, you can find calculators (excel files where you can enter the source data and quickly get the desired index). For some of them, there are not.&lt;/p&gt;
+&lt;p&gt;And it is hard to keep everything under control. You have to dig through your files every time, remember in which excel you made calculations, remember where you left the right calculator last time.&lt;/p&gt;
+&lt;p&gt;To put this matter in order a little and make life easier for those colleagues who do not want to re-enter the necessary formulas into Excel every time, I decided to collect calculators for those indexes that I often calculate in one excel file.&lt;/p&gt;
+&lt;p&gt;I present to your attention the &lt;a href=&#34;https://github.com/UXRozum/Swiss_Excelbook&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Swiss Army Research Excelbook&lt;/a&gt;. It contains methods for calculating most common indexes. Ideally, it should be as versatile as a Swiss army knife, so in the future I will supplement the methods and refine available calculators.&lt;/p&gt;
+&lt;h3 id=&#34;features&#34;&gt;Features&lt;/h3&gt;
+&lt;h2 id=&#34;easy-calsulation-of-metrics&#34;&gt;Easy calsulation of metrics&lt;/h2&gt;
+&lt;p&gt;Just past raw data (answers, or answer codes), and Swiss Excelbook will calculate metrics&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;SUM.gif&#34; alt=&#34;using SRE&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tons-of-different-metrics&#34;&gt;Tons of different metrics&lt;/h2&gt;
+&lt;p&gt;What calculators are already available&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SUM (Single Usability Metric)&lt;/strong&gt; - a single metric for measuring usability&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;UMUX (Usability Metric for User Experience)&lt;/strong&gt; - a questionnaire for measuring the usability of a product&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;CES (Customer Effort Score)&lt;/strong&gt; - assessment of the complexity of a particular action&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;NPS (Net Promoter Score)&lt;/strong&gt; - measures the loyalty of customers to a company&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;CSI (Customer Satisfaction Score)&lt;/strong&gt; - the index of satisfaction with the product&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ODI (Outcome Driven Innovation)&lt;/strong&gt; - determining the significance of the job statement within the jtbd and the outcome driven innovation approach (Ulvik approach)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Kano model&lt;/strong&gt; - proiritize features on a product roadmap&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;PSM (Price Sensitivity Meter)&lt;/strong&gt; - four questions to identify the optimal product price&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;plots-for-every-metric&#34;&gt;Plots for every metric&lt;/h2&gt;
+&lt;p&gt;Every calculated metric has a plot for study presentation&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;CSI.gif&#34; alt=&#34;Plots&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;benchmarks&#34;&gt;Benchmarks&lt;/h2&gt;
+&lt;p&gt;For some metrics there are benchmarks for ease of analysis&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;SUS.gif&#34; alt=&#34;Benchmarks&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;how-does-it-work&#34;&gt;How does it work?&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Download file&lt;/li&gt;
+&lt;li&gt;Select the appropriate tab&lt;/li&gt;
+&lt;li&gt;Insert the cleaned raw data there&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The file itself has detailed instructions on what you can and can&amp;rsquo;t touch, how the raw data should look like, and some tips on using the indexes themselves&lt;/p&gt;
+&lt;p&gt;You can download my Swiss Excelbook &lt;a href=&#34;https://github.com/UXRozum/Swiss_Excelbook&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>QCA for usability tests</title>
+      <link>/project/qca-for-usability-tests/</link>
+      <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>/project/qca-for-usability-tests/</guid>
+      <description>&lt;p&gt;&lt;em&gt;It looks like another Goldberg machine. But, in reality, this technique could serve as an additional source of truth. You can’t have too many factors when you have to decide which usability problems correct foremost. And also, most of the techniques to prioritize usability problems are subjective, it’s good to add some more objectivity there.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;what-is-qca&#34;&gt;What is QCA?&lt;/h2&gt;
+&lt;p&gt;As a method, QCA was made to work in cases, where the general population is too small to use quantitative methods. For example, where you want to determine which factors lead to the economic prosperity of a state. There are nearly 200 states on our planet, so it’s hard to find enough cases for a quantitative study.
+And here comes Qualitative Comparative Analysis on fancy Boolean algebra horse. This method helps us to estimate the causal strength of each factor. With this, we can say, &lt;strong&gt;which usability problem is most crucial to fix&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(This method matches better for remote unmoderated studies, where you can analyze more respondents. Not 5-10, but 10-20. And this is not a replacement for other methods to estimate critically for usability problems. It’s better to use them all).&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;basic-concepts-of-qca&#34;&gt;Basic concepts of QCA&lt;/h2&gt;
+&lt;p&gt;The base of this method is a deep understanding of cause-effect relations. In our case “Cause” is a usability problem and “Effect” is a success (or failure) of task completion. So, for every effect, there is a cause, and to describe the power of this relation we will use two measures — Necessity and Sufficiency.&lt;/p&gt;
+&lt;h4 id=&#34;necessity&#34;&gt;Necessity&lt;/h4&gt;
+&lt;p&gt;Necessity is the measure that shows how necessary cause for an effect.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Necessity.png&#34; alt=&#34;Necessity&#34; title=&#34;Necessity&#34;&gt; &lt;em&gt;In this picture we see the case of 100% necessity – there is no effect without this cause.&lt;/em&gt;&lt;/p&gt;
+&lt;h4 id=&#34;sufficiency&#34;&gt;Sufficiency&lt;/h4&gt;
+&lt;p&gt;Sufficiency shows us, at which extent causes enough to cause the effect.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Sufficiency.png&#34; alt=&#34;Sufficiency&#34; title=&#34;Sufficiency&#34;&gt; &lt;em&gt;In this picture we see 100% sufficiency – there is no cause without the effect.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;And so, 100% sufficiency and 100% necessity will give us 100% correlation:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Full_correlation.png&#34; alt=&#34;Full correlation&#34; title=&#34;Full correlation&#34;&gt; &lt;em&gt;It&amp;rsquo;s not 100% in this pic, just for you to understand the mechanism.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Playing with these two metrics we can make a synthetic index which we could use as a measure of the criticality of a usability problem:&lt;/p&gt;
+&lt;p&gt;CR =(NS+SF)/2&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;So, with 100% sufficiency and 100% necessity, we will have 100% critically.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To calculate these metrics we use truth tables (where each problem called &amp;ldquo;Factor&amp;rdquo;, as a possible cause).
+&lt;img src=&#34;Truth_table.png&#34; alt=&#34;Truth table&#34; title=&#34;Truth table&#34;&gt;&lt;/p&gt;
+&lt;p&gt;And for each factor we do separate tables:
+&lt;img src=&#34;Factor_table.png&#34; alt=&#34;Factor table&#34; title=&#34;Factor table&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A is the number of cases, where &lt;strong&gt;factor and effect are both presents&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;B is the number of cases, where &lt;strong&gt;factor is absent and effect is present&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;C is the number of cases, where &lt;strong&gt;factor is present and effect is absent&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;D is the number of cases where &lt;strong&gt;factor and effect are both absent&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So, Necessity (Nc) measure will be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NS = A(A+B)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And, Sufficiency (Sf)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SF = A/(A+C)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And, finally, our Criticality Index will be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CI = (Nc+Sf)/2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let’s watch these ideas on semi-real example! We have this one usability test protocol:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ex1.png&#34; alt=&#34;Example 1&#34; title=&#34;Example 1&#34;&gt;&lt;em&gt;Note, factors here are problems, and the effect is the failure (failed task)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;To test the Necessity and Sufficiency of each problem, we should count each A/B/C/D case:
+&lt;img src=&#34;ex2.png&#34; alt=&#34;Example 2&#34; title=&#34;Example 2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;And after this we could easily calculate all metrics using our formulas:
+&lt;img src=&#34;ex3.png&#34; alt=&#34;Example 3&#34; title=&#34;Example 3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As we see, Problem 3 got the highest critical score, which means that correcting this problem will get us the highest benefit.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;And with this, we got on our hands another criticality evaluation method, which could help us to improve our backlog prioritization. We just barely touched the surface of QCA, so this field is untilled. And I would be really glad if anyone wants to dig deeper, there are tons of methodological treasures looking for their discoverer!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

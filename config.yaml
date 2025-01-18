@@ -5,10 +5,8 @@ copyright: '{year}'
 enableGitInfo: no
 defaultContentLanguage: en
 hasCJKLanguage: no
-defaultContentLanguageInSubdir: no
 removePathAccents: yes
 summaryLength: 30
-paginate: 10
 enableEmoji: yes
 enableRobotsTXT: yes
 footnotereturnlinkcontents: <sup>^</sup>
@@ -70,3 +68,18 @@ module:
   imports:
     - path: github.com/wowchemy/wowchemy-hugo-modules/netlify-cms-academic
     - path: github.com/wowchemy/wowchemy-hugo-modules/wowchemy
+defaultContentLanguageInSubdir: true
+languages:
+  ru:
+    contentDir: content/ru
+    disabled: false
+    languageCode: ru
+    languageDirection: ltr
+    languageName: Russian
+    weight: 0
+  en:
+    contentDir: content/en
+    disabled: false
+    languageCode: en-US
+    languageDirection: ltr
+    languageName: English
