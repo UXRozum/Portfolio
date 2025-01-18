@@ -36,7 +36,7 @@ CardSort is an R script designed for processing card sorting data, generating vi
   
 ## How to use the script?
 
-A detailed guide on using the script is provided in [this article](uxrozum.com/en/post/cardsorting/). An example of the script in action is in this video:
+A detailed guide on using the script is provided in [this article](https://www.uxrozum.com/en/post/cardsorting/). An example of the script in action is in this video:
 {{< youtube WQmqlDw_2wE >}}
 
 ## Download
