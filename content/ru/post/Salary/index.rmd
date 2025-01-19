@@ -6,7 +6,7 @@ slug: SalaryQ32024
 categories: []
 tags: []
 subtitle: ''
-summary: ''
+summary: 'Вертим данные анонимного опроса по зарплатам'
 authors: []
 lastmod: '2025-01-19T18:22:44+03:00'
 featured: no
