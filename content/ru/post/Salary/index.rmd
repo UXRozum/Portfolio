@@ -11,7 +11,7 @@ authors: []
 lastmod: '2025-01-19T18:22:44+03:00'
 featured: no
 image:
-  caption: ''
+  caption: 'Вертим данные анонимного опроса по зарплатам'
   focal_point: ''
   preview_only: no
 projects: []
