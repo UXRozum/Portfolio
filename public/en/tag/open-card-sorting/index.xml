@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>open card sorting | Rozum S, UXR</title>
+    <link>/en/tag/open-card-sorting/</link>
+      <atom:link href="/en/tag/open-card-sorting/index.xml" rel="self" type="application/rss+xml" />
+    <description>open card sorting</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>2025</copyright><lastBuildDate>Mon, 27 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_512x512_fill_lanczos_center_2.png</url>
+      <title>open card sorting</title>
+      <link>/en/tag/open-card-sorting/</link>
+    </image>
+    
+    <item>
+      <title>Open Card Sorting — Quick Processing with R</title>
+      <link>/en/post/cardsorting/</link>
+      <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>/en/post/cardsorting/</guid>
+      <description>&lt;p&gt;Card sorting is an excellent method for organizing the information architecture of a website or application. It&amp;rsquo;s easy to collect data, but processing it can be challenging. Manually handling the dataset is quite tedious.&lt;/p&gt;
+&lt;p&gt;If you used an online service to collect the data, you might try their built-in processing tools, but they don&amp;rsquo;t always yield clear results. We can spend hours staring at a correlation table without understanding what to do with it. Dendrograms are better, but not all platforms allow you to build them, and they often look confusing.&lt;/p&gt;
+&lt;p&gt;Today, I’d like to share a simple and straightforward way to process card sorting results so that you don&amp;rsquo;t get lost and can present them clearly to your clients.&lt;/p&gt;
+&lt;h2 id=&#34;a-bit-about-card-sorting&#34;&gt;A Bit About Card Sorting&lt;/h2&gt;
+&lt;p&gt;Card sorting is a qualitative-quantitative method to find the most optimal grouping of entities. You can use it to build user-friendly app navigation or categorize products into understandable groups.&lt;/p&gt;
+&lt;p&gt;Participants are given cards to divide into groups in any logical way they prefer.&lt;/p&gt;
+&lt;p&gt;If you have predefined groups, it&amp;rsquo;s called closed sorting. If participants can create as many groups as they want and name them, it&amp;rsquo;s called open card sorting.&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-what-card-sorting-looks-like&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/cardsorting/1_huf435d52250b10177ac53d9e8a9f3967a_199624_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;What card sorting looks like&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/cardsorting/1_huf435d52250b10177ac53d9e8a9f3967a_199624_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1960&#34; height=&#34;1793&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    What card sorting looks like
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;It&amp;rsquo;s good practice to discuss with participants why they grouped cards the way they did. In-person research works better for this than remote.&lt;/p&gt;
+&lt;p&gt;There&amp;rsquo;s also reverse card sorting, or tree testing, which can test an already structured system.&lt;/p&gt;
+&lt;p&gt;In this case, we&amp;rsquo;ll talk about open card sorting.&lt;/p&gt;
+&lt;h2 id=&#34;about-the-data-well-use&#34;&gt;About the Data We&amp;rsquo;ll Use&lt;/h2&gt;
+&lt;p&gt;When I thought about this article, I couldn&amp;rsquo;t find open test datasets for card sorting. Generating data myself wasn’t appealing, so I decided to collect my own &lt;a href=&#34;https://github.com/UXRozum/cardsort-en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dataset&lt;/a&gt;, available to everyone.&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-post-inviting-participants-to-the-survey&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/cardsorting/2_hu5ab31b612e3754be50535ca75eed0886_30126_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;The post inviting participants to the survey&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/cardsorting/2_hu5ab31b612e3754be50535ca75eed0886_30126_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;520&#34; height=&#34;285&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    The post inviting participants to the survey
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;The task was to group 20 different animals. I deliberately designed the cards to avoid obvious grouping options:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-cards-to-be-sorted&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/cardsorting/3_hu54630c53f68a7f60101a0f32492dca31_182748_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;The cards to be sorted&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/cardsorting/3_hu54630c53f68a7f60101a0f32492dca31_182748_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2347&#34; height=&#34;1497&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    The cards to be sorted
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;I received 107 responses. Thanks to everyone who participated! I cleaned the collected data and ended up with this table:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-raw-data-available-for-download&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/cardsorting/4_huf09665902d366847b23c8fdd41c1ca9e_58425_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Raw data, available for download&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/cardsorting/4_huf09665902d366847b23c8fdd41c1ca9e_58425_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1283&#34; height=&#34;575&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Raw data, available for download
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Almost all variables were created automatically; I added a &amp;ldquo;Group_tag&amp;rdquo; column to tag groups based on my classification criteria.&lt;/p&gt;
+&lt;p&gt;The distribution was as follows:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/cardsorting/5_hud5c375f1dcba1d2b2729869426b921fd_23878_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;/en/post/cardsorting/5_hud5c375f1dcba1d2b2729869426b921fd_23878_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;394&#34; height=&#34;474&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Mixed grouping refers to cases where no clear basis for grouping could be identified. Biological grouping follows basic biology lessons (e.g., reptiles, birds, mammals), with fictional animals often placed in a separate category.&lt;/p&gt;
+&lt;h2 id=&#34;analyzing-results&#34;&gt;Analyzing Results&lt;/h2&gt;
+&lt;p&gt;To process the results, we need the RStudio program. It&amp;rsquo;s free and can be downloaded &lt;a href=&#34;https://posit.co/download/rstudio-desktop/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. RStudio works on both Windows and Mac.&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-rstudio-interface&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/cardsorting/6_hu2dca2ff85dbd942c7b35f7eef40fe2a6_569159_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;The RStudio interface&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/cardsorting/6_hu2dca2ff85dbd942c7b35f7eef40fe2a6_569159_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1920&#34; height=&#34;1047&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    The RStudio interface
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Download the ready-to-use script &lt;a href=&#34;https://github.com/UXRozum/cardsort-en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and open it. I’ve detailed each step.&lt;/p&gt;
+&lt;h2 id=&#34;preparing-for-work&#34;&gt;Preparing for Work&lt;/h2&gt;
+&lt;p&gt;First, install and load the necessary libraries:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#Step 0: Install libraries (run only once after installing R)&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;install.packages&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;openxlsx&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;igraph&amp;#39;&lt;/span&gt;, 
+  &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;factoextra&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ggwordcloud&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;rstudioapi&amp;#39;&lt;/span&gt;))
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Step 1: Load libraries&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(igraph)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(openxlsx)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(factoextra)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(ggwordcloud)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(rstudioapi)&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;To run the code, highlight it and press ctrl+enter.&lt;/p&gt;
+&lt;p&gt;After installation, you&amp;rsquo;ll see this message:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-full-code-available-herehttpsgithubcomuxrozumcardsort-en&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/cardsorting/8_hu5f3e8e1d15c3758cc13c44fdbe46bc07_48911_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Full code available &amp;lt;a href=&amp;#34;https://github.com/UXRozum/cardsort-en&amp;#34;&amp;gt;here&amp;lt;/a&amp;gt;&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/cardsorting/8_hu5f3e8e1d15c3758cc13c44fdbe46bc07_48911_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;549&#34; height=&#34;134&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Full code available &lt;a href=&#34;https://github.com/UXRozum/cardsort-en&#34;&gt;here&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;When loading packages with the &lt;code&gt;library&lt;/code&gt; command, you’ll get warnings — no need to worry about them:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-full-code-available-herehttpsgithubcomuxrozumcardsort-en&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/cardsorting/9_huf4420a30ca75533deeda727b7320d01b_29322_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Full code available &amp;lt;a href=&amp;#34;https://github.com/UXRozum/cardsort-en&amp;#34;&amp;gt;here&amp;lt;/a&amp;gt;&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/cardsorting/9_huf4420a30ca75533deeda727b7320d01b_29322_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;846&#34; height=&#34;383&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Full code available &lt;a href=&#34;https://github.com/UXRozum/cardsort-en&#34;&gt;here&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Now we’re ready to work with the data.&lt;/p&gt;
+&lt;h2 id=&#34;loading-data-into-rstudio&#34;&gt;Loading Data into RStudio&lt;/h2&gt;
+&lt;p&gt;First, load the &lt;code&gt;Card.xlsx&lt;/code&gt; file from &lt;a href=&#34;https://github.com/UXRozum/cardsort-en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Place it in a separate folder (preferably with a Latin-based name).&lt;/p&gt;
+&lt;p&gt;To upload the data from &lt;code&gt;Card.xlsx&lt;/code&gt;, use the following commands:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#Step 2: Select a folder&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;setwd&lt;/span&gt;(
+  rstudioapi&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;selectDirectory&lt;/span&gt;()) 
+&lt;span style=&#34;color:#75715e&#34;&gt;#This should be a separate folder on your computer&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#with a Latin name&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#The folder should contain a data file - Card.xlsx&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;#Step 2.5: Load data&lt;/span&gt;
+Raw &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;read.xlsx&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Card.xlsx&amp;#39;&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;#The file must have at least three columns&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#Card - card names&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#Group_id - group ID (unique for EACH group)&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#Group_name - group names provided by respondents&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;RStudio will prompt you to select the folder containing &lt;code&gt;Card.xlsx&lt;/code&gt;. Analysis results will also be saved in this folder.&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-now-we-have-the-raw-dataset-to-work-with&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/cardsorting/11_hu56efccd64098895586b9e70e8ee5698f_52579_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Now we have the Raw dataset to work with&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/cardsorting/11_hu56efccd64098895586b9e70e8ee5698f_52579_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;840&#34; height=&#34;543&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Now we have the Raw dataset to work with
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;creating-a-adjacency-table&#34;&gt;Creating a Adjacency Table&lt;/h2&gt;
+&lt;p&gt;A adjacency table shows how often each pair of cards appeared in the same group. Use the following commands to create and save it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#Step 3: Create an adjacency table&lt;/span&gt;
+Adj &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;crossprod&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;table&lt;/span&gt;(Raw&lt;span style=&#34;color:#f92672&#34;&gt;$&lt;/span&gt;Group_id, Raw&lt;span style=&#34;color:#f92672&#34;&gt;$&lt;/span&gt;Card))
+&lt;span style=&#34;color:#a6e22e&#34;&gt;diag&lt;/span&gt;(Adj) &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;#Step 4: Save the adjacency table&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;write.xlsx&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;as.data.frame&lt;/span&gt;(Adj), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Adjacency.xlsx&amp;#39;&lt;/span&gt;,
+           overwrite &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; T, col.names &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; T, row.names&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;T)&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The resulting file is called &lt;code&gt;Adjacency.xlsx&lt;/code&gt;. Let’s take a look inside:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-adjacency-table&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/cardsorting/13_hu7134c44c3247f69d8806e52e64aba47f_36549_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;The adjacency table&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/cardsorting/13_hu7134c44c3247f69d8806e52e64aba47f_36549_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;877&#34; height=&#34;773&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    The adjacency table
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;For instance, the cards &amp;ldquo;Viper&amp;rdquo; and &amp;ldquo;Basilisk&amp;rdquo; were grouped together 9 times out of 107. Let’s tidy up the table and add conditional formatting in Excel:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-same-table-now-with-conditional-formatting&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/cardsorting/14_hu52749932964c5e5279cf55766f9b5182_97475_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;The same table, now with conditional formatting&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/cardsorting/14_hu52749932964c5e5279cf55766f9b5182_97475_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1356&#34; height=&#34;901&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    The same table, now with conditional formatting
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Now it’s clearer. For example, we can see that the Basilisk often appears with the Dragon (92 times) and the Kraken (91 times).&lt;/p&gt;
+&lt;p&gt;But it’s still unclear how to group and interpret these results.&lt;/p&gt;
+&lt;h2 id=&#34;clustering-dendrogram&#34;&gt;Clustering (Dendrogram)&lt;/h2&gt;
+&lt;p&gt;Run the next step in the script:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#Edge betweenness algorithm - &lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#https://en.wikipedia.org/wiki/Girvan%E2%80%93Newman_algorithm&lt;/span&gt;
+Net &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;graph_from_adjacency_matrix&lt;/span&gt;(Adj, mode&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;undirected&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#75715e&#34;&gt;#Build network structure based on the adjacency table&lt;/span&gt;
+Clust &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;as.dendrogram&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;cluster_edge_betweenness&lt;/span&gt;(Net)) &lt;span style=&#34;color:#75715e&#34;&gt;#Build clusters&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;fviz_dend&lt;/span&gt;(Clust, k&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#Number of groups to obtain&lt;/span&gt;
+          ,horiz&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;T) &lt;span style=&#34;color:#75715e&#34;&gt;#Display the plot&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The result is the following graph:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-dendrogram-with-6-group-divisions&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/cardsorting/16_hu26fe124b26191ff82b24b6dac47ba34b_41226_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Dendrogram with 6 group divisions&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/cardsorting/16_hu26fe124b26191ff82b24b6dac47ba34b_41226_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1526&#34; height=&#34;1042&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Dendrogram with 6 group divisions
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Let’s break it down. The edge-betweenness algorithm removes the least-connected cards sequentially, allowing stable groups to emerge. The dendrogram shows how to best divide the cards into a set number of groups. Here we used 6, but the number can vary from 1 to 20 (since we have 20 cards).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;17.gif&#34; alt=&#34;&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-how-the-dendrogram-changes-with-varying-group-numbers&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;&#34; data-caption=&#34;How the dendrogram changes with varying group numbers&#34;&gt;
+
+
+  &lt;img src=&#34;&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    How the dendrogram changes with varying group numbers
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;We can now draw conclusions about optimal groupings, but the dendrogram is still not very intuitive, especially for those unfamiliar with them.&lt;/p&gt;
+&lt;h2 id=&#34;building-a-network-graph-visual-analysis-of-results&#34;&gt;Building a Network Graph (Visual Analysis of Results)&lt;/h2&gt;
+&lt;p&gt;While dendrograms are common in card sorting analysis, network graphs are rare.&lt;/p&gt;
+&lt;p&gt;A great article about analyzing card-sorting data using graph visualization is &lt;a href=&#34;https://uxpajournal.org/analyzing-card-sorting-data-using-graph-visualization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Analyzing Card-Sorting Data Using Graph VisualizationJUS (uxpajournal.org)&lt;/a&gt;. However, this type of visualization is seldom used elsewhere.&lt;/p&gt;
+&lt;p&gt;A network graph visualizes connections between entities, where each entity is a node and each connection is an edge.&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-example-of-a-network-graph-for-the-show-mad-men-where-each-node-represents-a-character-and-each-edge-represents-a-sexual-connection-between-them&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/cardsorting/18_hu8166c2e64ee2eb4cc118780f1073575e_162433_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Example of a network graph for the show Mad Men, where each node represents a character and each edge represents a sexual connection between them&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/cardsorting/18_hu8166c2e64ee2eb4cc118780f1073575e_162433_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1152&#34; height=&#34;1152&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Example of a network graph for the show Mad Men, where each node represents a character and each edge represents a sexual connection between them
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Let’s build a similar graph for our cards, where nodes represent cards and edges represent their grouping.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#Step 6: Build a network graph&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;plot.new&lt;/span&gt;()
+&lt;span style=&#34;color:#a6e22e&#34;&gt;plot.igraph&lt;/span&gt;(
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;graph_from_adjacency_matrix&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;ifelse&lt;/span&gt;(Adj&lt;span style=&#34;color:#ae81ff&#34;&gt;-10&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, Adj&lt;span style=&#34;color:#ae81ff&#34;&gt;-10&lt;/span&gt;)
+                              &lt;span style=&#34;color:#75715e&#34;&gt;#This is the number of connections to filter out, &lt;/span&gt;
+                              &lt;span style=&#34;color:#75715e&#34;&gt;#the higher the number, the stronger the connections&lt;/span&gt;
+                              &lt;span style=&#34;color:#75715e&#34;&gt;#if the graph looks cluttered, increase this number&lt;/span&gt;
+                              &lt;span style=&#34;color:#75715e&#34;&gt;#focus on the number of respondents&lt;/span&gt;
+                              
+                              , mode&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;undirected&amp;#39;&lt;/span&gt;), 
+  vertex.label.color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;black&amp;#34;&lt;/span&gt;, vertex.color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gray&amp;#34;&lt;/span&gt;, 
+  vertex.size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;, vertex.frame.color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;gray&amp;#39;&lt;/span&gt;,asp &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.7&lt;/span&gt;,
+  layout &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; layout.kamada.kawai,
+  vertex.label.cex &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.9&lt;/span&gt;,
+  width&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, height&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The result is as follows:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-network-graph-beautiful-isnt-it&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/cardsorting/20_hu5afd63599df92f619a5291a20aac23fe_212120_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Network graph. Beautiful, isn’t it?&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/cardsorting/20_hu5afd63599df92f619a5291a20aac23fe_212120_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1072&#34; height=&#34;916&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Network graph. Beautiful, isn’t it?
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;The lines are hard to distinguish — there are too many connections. Let’s address this by iteratively reducing connections based on adjacency table values.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;Adj2 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; Adj&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;max&lt;/span&gt;(Adj)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 80% of the strongest connections&lt;/span&gt;
+Adj2 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; Adj&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;max&lt;/span&gt;(Adj)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 60% of the strongest connections&lt;/span&gt;
+Adj2 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; Adj&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;max&lt;/span&gt;(Adj)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 20% of the strongest connections&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;For example, here’s a graph with 60% of the connections removed:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-much-clearer-now&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/cardsorting/22_hu986370eb32fe53aeb5b0aeabce4676c7_24815_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Much clearer now&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/cardsorting/22_hu986370eb32fe53aeb5b0aeabce4676c7_24815_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1000&#34; height=&#34;1000&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Much clearer now
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;We now see a mixed grouping: two large groups by habitat (aquatic and terrestrial), insects separately, and mythical creatures in their own group.&lt;/p&gt;
+&lt;p&gt;Here’s a dynamic view:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;23.gif&#34; alt=&#34;&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-how-the-network-graph-changes-with-connection-removal&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;&#34; data-caption=&#34;How the network graph changes with connection removal&#34;&gt;
+
+
+  &lt;img src=&#34;&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    How the network graph changes with connection removal
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;word-clouds&#34;&gt;Word Clouds&lt;/h2&gt;
+&lt;p&gt;We’ve dealt with the groups, but one thing remains: how to name them. Since we conducted an open card sort, the respondents themselves named the groups. We still have this data, and we’ll use it to create a word cloud for each group.&lt;/p&gt;
+&lt;p&gt;For example, we have the group “Cockroach-Spider-Dragonfly.” Let’s try to name it somehow.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;Adj2 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; Adj&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;max&lt;/span&gt;(Adj)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 80% of the strongest connections&lt;/span&gt;
+Adj2 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; Adj&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;max&lt;/span&gt;(Adj)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 60% of the strongest connections&lt;/span&gt;
+Adj2 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; Adj&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;max&lt;/span&gt;(Adj)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 20% of the strongest connections&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;We end up with the following word cloud:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-word-cloud-for-the-group-cockroach-spider-dragonfly&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/cardsorting/25_hu1d2882b0edc5d35240070484fa8f4ae8_144545_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Word cloud for the group ‘Cockroach-Spider-Dragonfly’&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/cardsorting/25_hu1d2882b0edc5d35240070484fa8f4ae8_144545_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1225&#34; height=&#34;769&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Word cloud for the group ‘Cockroach-Spider-Dragonfly’
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;And just like that, we’ve processed our results without much trouble.&lt;/p&gt;
+&lt;h2 id=&#34;quick-option&#34;&gt;Quick Option&lt;/h2&gt;
+&lt;p&gt;If you don’t want to go through all the steps, there’s a quick option:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/UXRozum/cardsort-en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download&lt;/a&gt; two files: Cards.xlsx and CardSort.R.&lt;/li&gt;
+&lt;li&gt;Place them in the same folder.&lt;/li&gt;
+&lt;li&gt;Open the script.&lt;/li&gt;
+&lt;li&gt;Highlight all lines from 86 (#Start) to 1139 (#End).&lt;/li&gt;
+&lt;li&gt;Press Ctrl+Enter.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The script will do everything for you: generate and save a match table, create and save dendrograms (breaking down into groups from 1 to the number of cards), build 20 network graphs (from 100% connections to 5% connections), and generate word clouds for each card.&lt;/p&gt;
+&lt;p&gt;I’ve recorded a video demonstrating how to work with the quick option for clarity:&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/WQmqlDw_2wE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;in-conclusion&#34;&gt;In Conclusion&lt;/h2&gt;
+&lt;p&gt;Thank you for reading to the end; I hope you found it interesting. This script can be used to analyze a card sort you’ve conducted yourself—just insert your data into the Card.xlsx file.&lt;/p&gt;
+&lt;p&gt;The script and data can be downloaded on my &lt;a href=&#34;https://github.com/UXRozum/cardsort-en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you liked the article, don’t hesitate to share it, and feel free to send your comments and feedback to &lt;a href=&#34;mailto:mail@uxrozum.com&#34;&gt;mail@uxrozum.com&lt;/a&gt; or on &lt;a href=&#34;t.me/keycee&#34;&gt;Telegram&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Script for open card sorting</title>
+      <link>/en/project/cardsort/</link>
+      <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>/en/project/cardsort/</guid>
+      <description>&lt;p&gt;CardSort is an R script designed for processing card sorting data, generating visualizations, and analytical reports. This tool simplifies analysis, allowing UX researchers and designers to quickly and accurately identify user grouping logic.&lt;/p&gt;
+&lt;h2 id=&#34;why-do-you-need-this-script&#34;&gt;Why do you need this script?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time-saving.&lt;/strong&gt; Automatic processing of data from card sorting tools like OptimalSort reduces the need for manual analysis.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Informative visualization.&lt;/strong&gt; The script generates dendrograms, similarity matrices, and other useful charts that help understand user preferences.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;In-depth analysis.&lt;/strong&gt; Identifying grouping patterns and calculating consistency metrics.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-does-cardsort-work&#34;&gt;How does CardSort work?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Data loading.&lt;/strong&gt; The script accepts card sorting data in CSV format.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data processing.&lt;/strong&gt; Based on user groupings, similarity matrices are created, and metrics are calculated.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Report generation.&lt;/strong&gt; The following are generated:
+&lt;ul&gt;
+&lt;li&gt;Similarity matrix showing the frequency of co-grouping elements.&lt;/li&gt;
+&lt;li&gt;Dendrogram visualizing how users grouped elements.&lt;/li&gt;
+&lt;li&gt;Network graph of relationships between cards.&lt;/li&gt;
+&lt;li&gt;Word clouds for group names.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-to-use-the-script&#34;&gt;How to use the script?&lt;/h2&gt;
+&lt;p&gt;A detailed guide on using the script is provided in &lt;a href=&#34;https://www.uxrozum.com/en/post/cardsorting/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this article&lt;/a&gt;. An example of the script in action is in this video:
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/WQmqlDw_2wE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;download&#34;&gt;Download&lt;/h2&gt;
+&lt;p&gt;You can download this script and test data from my &lt;a href=&#34;https://github.com/UXRozum/cardsort-en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

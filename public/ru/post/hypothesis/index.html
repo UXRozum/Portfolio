@@ -1,0 +1,1084 @@
+<!DOCTYPE html><html lang="ru" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.0.0-beta.2 for Hugo" />
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Сережа Розум" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="TL;DR: не проверяйте гипотезы — задавайте вопросы" />
+
+  
+    <link rel="alternate" hreflang="en" href="/en/post/hypothesis/" />
+  
+  <link rel="alternate" hreflang="ru" href="/ru/post/hypothesis/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#7FBBA0" />
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.ac1319ffc611c3fe1c721a0af0a128ba.css" />
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HYQ5BWL319"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-HYQ5BWL319', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/ru/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_180x180_fill_lanczos_center_2.png" />
+
+  <link rel="canonical" href="/ru/post/hypothesis/" />
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Rozum S, UXR" />
+  <meta property="og:url" content="/ru/post/hypothesis/" />
+  <meta property="og:title" content="Весь мир — гипотеза, а мы в нем *вставьте слово* | Rozum S, UXR" />
+  <meta property="og:description" content="TL;DR: не проверяйте гипотезы — задавайте вопросы" /><meta property="og:image" content="/ru/post/hypothesis/featured.png" />
+    <meta property="twitter:image" content="/ru/post/hypothesis/featured.png" /><meta property="og:locale" content="ru" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-03-15T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-03-15T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/ru/post/hypothesis/"
+  },
+  "headline": "Весь мир — гипотеза, а мы в нем *вставьте слово*",
+  
+  "image": [
+    "/ru/post/hypothesis/featured.png"
+  ],
+  
+  "datePublished": "2021-03-15T00:00:00Z",
+  "dateModified": "2021-03-15T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Сережа Розум"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rozum S, UXR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "TL;DR: не проверяйте гипотезы — задавайте вопросы"
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+<script src="/js/language-redirect.js"></script>
+
+  <title>Весь мир — гипотеза, а мы в нем *вставьте слово* | Rozum S, UXR</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.0475bc389b7599ef6b1889ad17c11742.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Поиск</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Поиск ..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Поиск ...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/ru/">Rozum S, UXR</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Переключить навигацию">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/ru/">Rozum S, UXR</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ru/#about"><span>Обо мне</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/ru/post"><span>Статьи</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ru/project"><span>Проекты</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+
+      
+      
+
+      
+      <li class="nav-item dropdown i18n-dropdown">
+        <a href="#" class="nav-link " data-toggle="dropdown"
+           aria-haspopup="true" aria-label="Languages">
+          <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+        <div class="dropdown-menu">
+          <div class="dropdown-item dropdown-item-active">
+            <span>Русский</span>
+          </div>
+          
+          <a class="dropdown-item" href="/en/post/hypothesis/">
+            <span>English</span>
+          </a>
+          
+        </div>
+      </li>
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>Весь мир — гипотеза, а мы в нем *вставьте слово*</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Mar 15, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    8 мин. для прочтения
+  </span>
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 405px;">
+  <div style="position: relative">
+    <img src="/ru/post/hypothesis/featured_hufe8acb6115dd1b233b0868541061e2fa_1251458_720x0_resize_lanczos_2.png" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Часто замечаю в обсуждении исследовательского процесса фразу «Занимался(лась) проверкой гипотез». Бэклог у нас состоит из гипотез, отчеты по исследованиям начинаются с фраз «Подтвердилось x гипотез из y». От всех вокруг слышно про гипотезы. Их уточняют, одобряют, отбирают, возвращают в работу. Вся исследовательская активность вращается вокруг гипотезы. Гипотеза поглотила мысли и менеджеров, и исследователей. Из каждого тостера мы слышим «Продукт — это гипотеза, и 9 из 10 продуктов проваливаются».</p>
+<p>Понятие «гипотеза», благодаря своей распространенности, стало общеупотребительным. Поэтому никто не задается вопросом «Что такое гипотеза?». Смысл термина очевиден, скажете вы, стыдно не знать, что такое гипотеза. Но, очевидные вещи часто оказываются самыми сложными для изучения и понимания. Давайте вместе окунемся в океан банальностей и попробуем ответить для себя на вопрос «А что же такое гипотеза?»</p>
+<h2 id="итак-что-такое-гипотеза">Итак, что такое гипотеза</h2>
+<p>На первый взгляд все предельно ясно и понятно «Гипотеза — это предположение». Но, для правильного функционирования ее нам уже требуются уточнения.</p>
+<p><em>Во-первых, гипотеза — это предположение, которое можно опровергнуть или подтвердить.</em> И это очень важно. Мы физически не должны иметь возможность иметь третье. Булевая логика — это обязательный признак гипотезы. Цель любого исследования — получение новой информации. Мы не можем сказать «гипотеза ни подтверждена, ни опровергнута», это не несет в себе полезной информации. Если мы не можем подтвердить или опровергнуть гипотезу, то скорее всего мы потратили время на ее проверку впустую.</p>
+<p>«Но ведь бывают частично подтвержденные или частично опровергнутые гипотезы», возразите вы. К сожалению, это немного не так. Чаще всего частичное подтверждение — это либо дополнительный фактор, либо неправильный вывод. Например: «У офисных работников возникает проблема X». На интервью данная проблема возникала только у респондентов в должности офис-менеджера. Подтвердилась ли гипотеза? Дотошный исследователь скажет: «Гипотеза подтверждена не полностью», и будет во многом прав.</p>
+<p>Этот вывод вносит уточнение, дополнительную информацию. Но чаще я встречаюсь с выводом «Проблема возникла у менее чем половины респондентов, гипотеза подтверждена частично» или «Ни у одного респондента не возникало данной проблемы, мы не можем подтвердить или опровергнуть гипотезу». В первом случае мы видим, что на самом деле гипотеза подтверждена. Проблема возникает у офисных сотрудников. Мы не можем судить по результатам глубинок про ее распространенность. Но физическое наличие проблемы доказано. Во втором случае мы мыслим слишком оптимистично. С одной стороны, да, может быть нам просто не попались респонденты с подобной проблемой, или может быть мы не те вопросы задавали. Но с другой стороны, со стороны продукта выгоднее будет отнести гипотезу к опровергнутым и искать более распространенные проблемы. Иначе мы остаемся в вечном цикле чайника Рассела.</p>
+<p><em>Второй важный момент — гипотеза должна быть проверяемой.</em> Каждая гипотеза должна быть операционализируемой, гипотезы, которые мы не можем проверить, будут нам бесполезны. Тут стоит сказать про сложность гипотез. Гипотеза, которую мы не можем проверить — это чаще всего гипотеза, которую проверить слишком сложно. А сложно значит дорого. Например, гипотеза «Продукт решает проблему Х». Ее мы можем проверить, предложив респонденту воспользоваться продуктом для решения проблемы. А вот гипотеза «Продукт эффективно решает проблему Х» гораздо сложнее. Нам необходимо определить эффективность, найти возможность эту эффективность замерить, провести замеры этой самой эффективности у продуктов-конкурентов. Бюджет исследования растет как на дрожжах. А в нашем мире дешевых и быстрых исследований это верная смерть. То есть, определяя гипотезу, мы должны учитывать стоимость и возможность ее проверки. Иначе мы тратим время зря, не получаем никакой новой информации.</p>
+<p>Еще один бич формулировки гипотез — соответствие гипотезы методу исследования. Каждый метод исследования имплицирует собственный набор предположений. Например, опрос подразумевает, что все респонденты могут иметь мнение по этому вопросу. Юзабилити-тест предполагает возможность респондента совершить ошибку, запороть задание. И подобные, часто умалчиваемые, как бы само собой разумеющиеся предположения увеличивают сложность гипотезы. Если не следить за этим, можно провести еще несколько бесполезных исследований. Например, опрос по тому, какой шрифт лучше для сайта — с засечками или нет.</p>
+<p>еловек, не искушенный в исследовательском промысле, спокойно может скатиться к самому простому варианту «Пусть пользователи скажут». А пользователь, скорее всего, и не знает, чем шрифт с засечками отличается от шрифта без засечек. Нет, пользователь не тупой, ему просто это не важно. Пользовательская рефлексия имеет собственные границы, за которые лучше не переступать. <em>В попытках впихать невпихуемое в исследование, мы рискуем еще и совместить несовместимое.</em></p>
+<p>Например, попытаться в юзабилити-тесте оценить вероятность покупки продукта. Опрос для этого проходит гораздо лучше, а пилотные продажи еще удачнее. Юзабилити-тест — далеко не лучший вариант для этого. Мало того, что у нас качественная выборка, так еще и респондент уже “испорчен” знанием о продукте. Но ведь от одной лишней гипотезы никто не умирал, не правда ли? В итоге мы рискуем остаться в иллюзии осведомленности.</p>
+<p><em>Если вам еще не наскучило читать, думаю, вы уже понимаете, что гипотеза — довольно тонкий инструмент. Неопытный исследователь или продакт легко может выстрелить себе в ногу, и не заметить это. А ведь это еще не все.</em></p>
+<h2 id="трансформация-смысла-гипотезы">Трансформация смысла гипотезы</h2>
+<p>В работе с заказчиком мы часто просим их предложить собственные гипотезы. Это трансформирует их смысл, теперь гипотеза — это не только инструмент операционализации, но и инструмент коммуникации. Мы начинаем разговор с гипотез, они выступают в роли брифа. “Чем же это плохо?”, спросите вы. Мы повышаем гибкость, сокращаем лишние движения с постановкой целей и задач, ускоряем процесс. Да и гранулярность в деле — набираешь себе гипотезы в лукошко, проверяешь.</p>
+<p>Но, при подобной постановке вопроса мы с большой долей вероятности столкнемся с большинством подводных камней формулирования гипотез. Списку гипотезы необходима постоянная модерация, заказчикам — постоянное обучение. И ведь это еще не самое интересное. <em>Превращая гипотезы в коммуникацию, мы наслаиваем на нее дополнительный смысл. Теперь на гипотезы можно обидеться, гипотезой можно выразить сомнение. Гипотезой можно похвалить или поругать идею.</em></p>
+<p>Интересный для этого пример — гипотезы в юзабилити-тесте. Сам смысл юзабилити-теста — поиск юзабилити-проблем. Этот момент имплицирован в исследование. И поэтому гипотезы должны быть о проблемах. И самый важный момент — доказывать отсутствие проблем будет слишком сложно. Наиболее оптимальный вариант — гипотеза вида «Респондент не найдет кнопку Х». Придумывая гипотезы для юзабилити-теста, мы заранее ищем возможные слабые места, так как проверять каждый элемент интерфейса тоже дорого. И здесь возникает проблема — предлагая подобные гипотезы, мы как бы коммуницируем дизайнерам негативный фидбек. И некоторые из них могут и обидеться на это.</p>
+<p>Современная культура стартапа с метафорой «Продукт — это гипотеза» тоже трансформирует понятие гипотезы. По факту это означает только то, что не стоит слишком сильно верить в продукт, он скорее всего не взлетит. Но часто люди понимают эту метафору буквально. Так и получается монстр Франкенштейна под названием «Продуктовая гипотеза». Продуктовая гипотеза настолько имплицитна, что у нее не остается ничего от гипотезы.</p>
+<p>Давайте рассмотрим весь процесс проверки подобной гипотезы. По факту, фраза “каждый продукт — это гипотеза” имеет под собой аж 5 слоев.</p>
+<ul>
+<li>
+<p>В первую очередь мы предполагаем, что существует некая потребность.</p>
+</li>
+<li>
+<p>Затем, что эта потребность возникает у достаточно широкой группы людей.</p>
+</li>
+<li>
+<p>Потом то, что продукт закрывает эту потребность.</p>
+</li>
+<li>
+<p>После чего мы предполагаем, что целевая аудитория узнает о продукте.</p>
+</li>
+<li>
+<p>И только после этого ставим гипотезу “Люди будут покупать продукт в достаточном количестве, чтобы покрыть наши расходы”.</p>
+</li>
+</ul>
+<p>Однако в большинстве своем мы схлопываем всю сложность проверки и остаемся на последнем уровне. Конечно упрощение — это всегда хорошо, но при этом мы теряем понимание того, сколько нужно исследовать для успешного вывода продукта на рынок.</p>
+<p>С* одной стороны, так и нужно, ведь посыл идеи “делай как можно больше MVP, и какой-нибудь из них взлетит”. Но, как мы видим на практике, потребность в исследованиях никуда не пропадает. В итоге, мы все висим где-то в середине. И стремимся делать исследования так, как будто мы не делаем исследований.* Исследование не должно занимать времени, ресурсов и отвлекать продакт овнера от важных решений. В свою очередь это приводит к интересному последствию — сложность гипотез, которые мы можем проверить, постоянно снижается.</p>
+<h2 id="так-зачем-нужны-гипотезы-и-нужны-ли-они">Так зачем нужны гипотезы? И нужны ли они?</h2>
+<p>Гипотезы нам нужны в качестве исследовательской оптики. Они позволяют нам сконцентрировать наши усилия на более конкретных вещах. <em>Гипотеза — это инструмент операционализации, она позволяет нам перейти от абстрактных понятий к конкретным метрикам, действиям и словам респондентов. Это незаменимый инструмент, но это инструмент исследователя. Превращая гипотезу в инструмент коммуникации, или используя его в качестве метафоры, мы снижаем ее ценность, как инструмента.</em> Причем хороший исследователь знает, что иногда можно обойтись и без гипотез. Например, в поисковом исследовании, или в выработке обоснованной теории. Современные стратегии смешивания качественных и количественных методов позволяют нам проводить исследования, весь смысл которых в формировании гипотез. А если гипотеза выступает в качестве брифа, то мы рискуем оказаться в порочном круге — для того, чтобы выработать гипотезы, нам нужно придумать гипотезы.</p>
+<h2 id="и-что-тогда-делать">И что тогда делать?</h2>
+<p>На мой взгляд, мы забываем про такую прекрасную штуку, как исследовательский вопрос. Хороший пример исследователького вопроса: «Какие проблемы возникают в работе бухгалтеров?». Исследовательский вопрос часто подменяется целями и задачами, уходит на второй план. А зря, на мой взгляд. Чаще всего правильно поставленного вопроса достаточно, чтобы накидать предварительный план исследования, и даже сценарий интервью, или опрос. И при этом, чтобы сформулировать исследовательский вопрос, достаточно спросить «А что ты хочешь узнать?». Если человек понимает, зачем ему нужно исследование, с большой долей вероятности он сможет сформулировать исследовательский вопрос. С ним гораздо сложнее ошибиться.</p>
+<p>И все-таки, давайте применять наши же методы исследований к нашим методам работы. <em>Ключевая пользовательская задача заказчика исследования — это узнать новую информацию, а не проверить гипотезы.</em> Как мы видим, это далеко не всегда одно и тоже. Поэтому, что я предлагаю — давайте начинать с формулировки исследовательского вопроса, а не с гипотез. Заказчику проще задать вопросы, потому что цель — получить ответы. А мы, исследователи, уже разберемся, как эти ответы получить. И научим других, если нужно и интересно. Никто ж ведь не мешает проводить брейншторм-сессии по формулированию гипотез. И вообще, подключать команду на любом этапе исследования — это круто и полезно. Главное — не увлекаться и использовать исследовательские инструменты по-назначению.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/ru/tag/%D0%B3%D0%B8%D0%BF%D0%BE%D1%82%D0%B5%D0%B7%D1%8B/">Гипотезы</a>
+  
+  <a class="badge badge-light" href="/ru/tag/%D0%B4%D0%B5%D0%BC%D0%BE%D0%BA%D1%80%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%B8%D1%81%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B8/">Демократизация исследований</a>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/ru/author/%D1%81%D0%B5%D1%80%D0%B5%D0%B6%D0%B0-%D1%80%D0%BE%D0%B7%D1%83%D0%BC/avatar_hu5b84e11c0a5bed4bec46c4f2fb26b9bd_94813_270x270_fill_q75_lanczos_center.jpg" alt="Сережа Розум">
+    
+
+    <div class="media-body">
+      <h5 class="card-title">Сережа Розум</h5>
+      <h6 class="card-subtitle">UX-исследователь, социолог</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:mail@uxrozum.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/sergey-rozum/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.t.me/keycee" target="_blank" rel="noopener">
+        <i class="fab fa-telegram"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    2025
+  </p>
+
+  
+  
+
+
+
+
+
+
+ <p class="powered-by">
+  
+  </p> 
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Процитировать</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Копия
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Скачать
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+        <div class="search-hit-content">
+          <div class="search-hit-name">
+            <a href="{{relpermalink}}">{{title}}</a>
+            <div class="article-metadata search-hit-type">{{type}}</div>
+            <p class="search-hit-description">{{snippet}}</p>
+          </div>
+        </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/ru/js/wowchemy.min.7381a7f963f52208b466b798604a8553.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="/js/language-redirect.js"></script>
+
+
+
+
+</body>
+</html>

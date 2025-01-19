@@ -1,0 +1,2156 @@
+<!DOCTYPE html><html lang="ru" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.0.0-beta.2 for Hugo" />
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Сережа Розум" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Немного теории, много практики, инструмены обработки" />
+
+  
+    <link rel="alternate" hreflang="en" href="/en/post/cardsorting/" />
+  
+  <link rel="alternate" hreflang="ru" href="/ru/post/cardsorting/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#7FBBA0" />
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.ac1319ffc611c3fe1c721a0af0a128ba.css" />
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HYQ5BWL319"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-HYQ5BWL319', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/ru/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_180x180_fill_lanczos_center_2.png" />
+
+  <link rel="canonical" href="/ru/post/cardsorting/" />
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Rozum S, UXR" />
+  <meta property="og:url" content="/ru/post/cardsorting/" />
+  <meta property="og:title" content="Открытая карточная сортировка — быстро обрабатываем с помощью R | Rozum S, UXR" />
+  <meta property="og:description" content="Немного теории, много практики, инструмены обработки" /><meta property="og:image" content="/ru/post/cardsorting/featured.png" />
+    <meta property="twitter:image" content="/ru/post/cardsorting/featured.png" /><meta property="og:locale" content="ru" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-09-27T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-09-27T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/ru/post/cardsorting/"
+  },
+  "headline": "Открытая карточная сортировка — быстро обрабатываем с помощью R",
+  
+  "image": [
+    "/ru/post/cardsorting/featured.png"
+  ],
+  
+  "datePublished": "2021-09-27T00:00:00Z",
+  "dateModified": "2021-09-27T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Сережа Розум"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rozum S, UXR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Немного теории, много практики, инструмены обработки"
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+<script src="/js/language-redirect.js"></script>
+
+  <title>Открытая карточная сортировка — быстро обрабатываем с помощью R | Rozum S, UXR</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.0475bc389b7599ef6b1889ad17c11742.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Поиск</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Поиск ..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Поиск ...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/ru/">Rozum S, UXR</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Переключить навигацию">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/ru/">Rozum S, UXR</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ru/#about"><span>Обо мне</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/ru/post"><span>Статьи</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ru/project"><span>Проекты</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+
+      
+      
+
+      
+      <li class="nav-item dropdown i18n-dropdown">
+        <a href="#" class="nav-link " data-toggle="dropdown"
+           aria-haspopup="true" aria-label="Languages">
+          <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+        <div class="dropdown-menu">
+          <div class="dropdown-item dropdown-item-active">
+            <span>Русский</span>
+          </div>
+          
+          <a class="dropdown-item" href="/en/post/cardsorting/">
+            <span>English</span>
+          </a>
+          
+        </div>
+      </li>
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>Открытая карточная сортировка — быстро обрабатываем с помощью R</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Sep 27, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 мин. для прочтения
+  </span>
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 405px;">
+  <div style="position: relative">
+    <img src="/ru/post/cardsorting/featured_hu1a8cb9a0b4a72bbd04adf2b8e5c3b3a5_725013_720x0_resize_lanczos_2.png" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Карточная сортировка — отличный способ организовать информационную архитектуру сайта или приложения. Ее несложно собирать, но с обработкой могут возникнуть проблемы. Руками полученный массив данных обрабатывать очень напряжно.</p>
+<p>Если собирали с помощью онлайн-сервиса, то можно попробовать воспользоваться встроенными инструментами обработки, но они не всегда дают понятный результат. Мы можем часами вглядываться в таблицу соответствий и не понимать, что с ней делать. Дендрограммы уже по лучше, но не везде можно их построить, и сами они выглядят не очень понятно.</p>
+<p>Сегодня я хотел бы поделиться простым и легким способом обработать результаты карточной сортировки таким образом, чтобы и самому не запутаться, и заказчику представить в понятном и простом виде.</p>
+<h2 id="немного-о-карточной-сортировке">Немного о карточной сортировке</h2>
+<p>Карточная сортировка — это качественно-количественный метод для поиска наиболее оптимального разделения неких сущностей на группы. Ее можно использовать, чтобы выстроить удобную навигацию в приложении, разбить товары на понятные категории.</p>
+<p>Респонденту предлагаются карточки, которые необходимо разделить на группы. Респондент может распределить карточки по группам любым логичным для него способом.</p>
+<p>Если у нас уже есть готовый набор групп, то сортировка называется закрытой. Если респондент сам может делать столько групп, сколько считает нужным, и называть их, то это открытая карточная сортировка.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-как-выглядит-карточная-сортировка">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/1_huf435d52250b10177ac53d9e8a9f3967a_199624_2000x2000_fit_lanczos_2.png" data-caption="Как выглядит карточная сортировка">
+
+
+  <img data-src="/ru/post/cardsorting/1_huf435d52250b10177ac53d9e8a9f3967a_199624_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1960" height="1793">
+</a>
+
+
+  
+  
+  <figcaption>
+    Как выглядит карточная сортировка
+  </figcaption>
+
+
+</figure>
+
+<p>Хорошая практика — поговорить с респондентом о том, почему он (или она) разделил карточки именно так, а не иначе. На очном исследовании это работает лучше, чем на удаленном.</p>
+<p>Также есть обратная карточная сортировка, или же tree testing, с ее помощью можно тестировать уже готовую структуру.</p>
+<p>В нашем случае мы будем говорить об открытой карточной сортировке.</p>
+<h2 id="немного-о-данных-с-которыми-мы-будем-работать">Немного о данных, с которыми мы будем работать</h2>
+<p>Когда я думал об этой статье, я не смог найти открытых тестовых датасетов для карточной сортировки. А генерировать данные самостоятельно не очень хотелось. Поэтому я решил собрать собственный <a href="https://github.com/UXRozum/cardsort" target="_blank" rel="noopener">датасет</a>, он доступен любому и каждому.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-так-выглядел-пост-с-предложением-пройти-опрос">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/2_hu5ab31b612e3754be50535ca75eed0886_30126_2000x2000_fit_lanczos_2.png" data-caption="Так выглядел пост с предложением пройти опрос">
+
+
+  <img data-src="/ru/post/cardsorting/2_hu5ab31b612e3754be50535ca75eed0886_30126_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="520" height="285">
+</a>
+
+
+  
+  
+  <figcaption>
+    Так выглядел пост с предложением пройти опрос
+  </figcaption>
+
+
+</figure>
+
+<p>Заданием было распределить по группам 20 разных зверюшек. Я специально постарался составить карточки так, чтобы не было очевидно правильного разделения:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-карточки-которые-надо-было-разделить">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/3_hu5bb6c2e34b21c9470603f50583496312_128956_2000x2000_fit_lanczos_2.png" data-caption="Карточки, которые надо было разделить">
+
+
+  <img data-src="/ru/post/cardsorting/3_hu5bb6c2e34b21c9470603f50583496312_128956_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1400" height="980">
+</a>
+
+
+  
+  
+  <figcaption>
+    Карточки, которые надо было разделить
+  </figcaption>
+
+
+</figure>
+
+<p>Получилось 107 ответов, спасибо всем, кто участвовал в сборе данных! Собранные результаты я выкачал и почистил, получилась следующая табличка:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-сырые-данные-их-можно-скачать-и-посмотреть-самостоятельно">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/4_huac0f94f21f59144b100888d9a6bb7c01_523399_2000x2000_fit_lanczos_2.png" data-caption="Сырые данные, их можно скачать и посмотреть самостоятельно">
+
+
+  <img data-src="/ru/post/cardsorting/4_huac0f94f21f59144b100888d9a6bb7c01_523399_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1780" height="879">
+</a>
+
+
+  
+  
+  <figcaption>
+    Сырые данные, их можно скачать и посмотреть самостоятельно
+  </figcaption>
+
+
+</figure>
+
+<p>Почти все переменные были созданы автоматически, я добавил только столбец “Group_tag” — в нем я протегировал группы на свое усмотрение по основанию классификации.</p>
+<p>Получилось следующее распределение:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure >
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/5_hu38c317f750a2be554404bf11a9757f7c_56560_2000x2000_fit_lanczos_2.png" >
+
+
+  <img data-src="/ru/post/cardsorting/5_hu38c317f750a2be554404bf11a9757f7c_56560_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="694" height="635">
+</a>
+
+
+
+</figure>
+
+<p>Смешанное разделение — это то, где нельзя точно определить одно основание разделения. Биологическое — это когда люди делили зверей примерно так, как мы помним по урокам биологии (например: пресмыкающиеся, птицы, млекопитающие). При этом часто респонденты при биологическом разделении часто выносили несуществующих зверей в отдельную категорию.</p>
+<h2 id="анализ-результатов">Анализ результатов</h2>
+<p>Для того чтобы обработать результаты, нам потребуется программа Rstudio. Она бесплатная, скачать ее можно <a href="https://posit.co/download/rstudio-desktop/" target="_blank" rel="noopener">здесь</a>. Rstudio можно поставить как на Windows, так и на Mac.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-так-выглядит-интерфейс-rstudio">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/6_hu427658ac0f30b76ea4f0f42ce594d0a6_556539_2000x2000_fit_lanczos_2.png" data-caption="Так выглядит интерфейс RStudio">
+
+
+  <img data-src="/ru/post/cardsorting/6_hu427658ac0f30b76ea4f0f42ce594d0a6_556539_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1920" height="1047">
+</a>
+
+
+  
+  
+  <figcaption>
+    Так выглядит интерфейс RStudio
+  </figcaption>
+
+
+</figure>
+
+<p>Готовый скрипт для обработки скачиваем <a href="https://github.com/UXRozum/cardsort" target="_blank" rel="noopener">тут</a>, и открываем, я постарался в нем все расписать по шагам.</p>
+<h2 id="подготовка-к-работе">Подготовка к работе</h2>
+<p>Прежде всего нам нужно поставить и запустить нужные библиотеки:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/7_huca15c1579512d0d074a40eaca33e7a22_217009_2000x2000_fit_lanczos_2.png" data-caption="Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;">
+
+
+  <img data-src="/ru/post/cardsorting/7_huca15c1579512d0d074a40eaca33e7a22_217009_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1400" height="439">
+</a>
+
+
+  
+  
+  <figcaption>
+    Полный код можно скачать <a href="https://github.com/UXRozum/cardsort">тут</a>
+  </figcaption>
+
+
+</figure>
+
+<p>Для того чтобы запустить код, нужно выделить его и нажать ctrl+enter</p>
+<p>После установки нам выдаст следующее сообщение:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/8_hu103e06042e5963bcf277e9323fdf5b1e_32612_2000x2000_fit_lanczos_2.png" data-caption="Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;">
+
+
+  <img data-src="/ru/post/cardsorting/8_hu103e06042e5963bcf277e9323fdf5b1e_32612_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="549" height="134">
+</a>
+
+
+  
+  
+  <figcaption>
+    Полный код можно скачать <a href="https://github.com/UXRozum/cardsort">тут</a>
+  </figcaption>
+
+
+</figure>
+
+<p>После загрузки пакетов с командой library будет много разных предупреждений, но их можно не пугаться:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/9_hu4b3920943c6883b9be6bde20d664050c_81375_2000x2000_fit_lanczos_2.png" data-caption="Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;">
+
+
+  <img data-src="/ru/post/cardsorting/9_hu4b3920943c6883b9be6bde20d664050c_81375_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="643" height="273">
+</a>
+
+
+  
+  
+  <figcaption>
+    Полный код можно скачать <a href="https://github.com/UXRozum/cardsort">тут</a>
+  </figcaption>
+
+
+</figure>
+
+<p>Теперь мы готовы работать с данными</p>
+<h2 id="загрузка-данных-в-rstudio">Загрузка данных в Rstudio</h2>
+<p>Сначала нам нужно загрузить файл Card.xlsx, который находится <a href="https://github.com/UXRozum/cardsort" target="_blank" rel="noopener">тут</a>. Файл должен находиться в отдельной папке, название папки в идеале — на латинице.</p>
+<p>Чтобы выгрузить данные из нашей эксельки Card.xlsx мы используем следующие команды:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/10_hu0827c0ae42794ca9a42512c3eb749d6b_361069_2000x2000_fit_lanczos_2.png" data-caption="Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;">
+
+
+  <img data-src="/ru/post/cardsorting/10_hu0827c0ae42794ca9a42512c3eb749d6b_361069_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1400" height="493">
+</a>
+
+
+  
+  
+  <figcaption>
+    Полный код можно скачать <a href="https://github.com/UXRozum/cardsort">тут</a>
+  </figcaption>
+
+
+</figure>
+
+<p>Rstudio предложит нам выбрать папку, где находится Card.xlsx. Далее в эту папку будут сохраняться результаты нашего анализа.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-теперь-у-нас-есть-датасет-raw-с-ним-мы-будем-дальше-работать">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/11_hu7f559066df5c7c7af6f06b6f34a1e3ef_86667_2000x2000_fit_lanczos_2.png" data-caption="Теперь у нас есть датасет Raw, с ним мы будем дальше работать">
+
+
+  <img data-src="/ru/post/cardsorting/11_hu7f559066df5c7c7af6f06b6f34a1e3ef_86667_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="591" height="258">
+</a>
+
+
+  
+  
+  <figcaption>
+    Теперь у нас есть датасет Raw, с ним мы будем дальше работать
+  </figcaption>
+
+
+</figure>
+
+<h2 id="создание-таблицы-совпадений">Создание таблицы совпадений</h2>
+<p>Таблица совпадений - это таблица, в которой показано, сколько раз каждая пара карточек находилась в одной группе. Чтобы создать такую табличку и сохранить ее в нашей папке, запускаем следующие команды:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/12_hu0060db969ec0ce8c53a294fae03d3e9f_179307_2000x2000_fit_lanczos_2.png" data-caption="Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;">
+
+
+  <img data-src="/ru/post/cardsorting/12_hu0060db969ec0ce8c53a294fae03d3e9f_179307_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1030" height="408">
+</a>
+
+
+  
+  
+  <figcaption>
+    Полный код можно скачать <a href="https://github.com/UXRozum/cardsort">тут</a>
+  </figcaption>
+
+
+</figure>
+
+<p>Получившийся файл называется Adjacency.xlsx, давайте посмотрим, что у него внутри</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-табличка-совпадений">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/13_hua34a12cb30239f07934abb653012c43f_329115_2000x2000_fit_lanczos_2.png" data-caption="Табличка совпадений">
+
+
+  <img data-src="/ru/post/cardsorting/13_hua34a12cb30239f07934abb653012c43f_329115_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1358" height="413">
+</a>
+
+
+  
+  
+  <figcaption>
+    Табличка совпадений
+  </figcaption>
+
+
+</figure>
+
+<p>В этой табличке мы видим, что, например, карточки “Гадюка” и “Василиск” находились в одной группе 9 раз, из возможных 107. Давайте немного причешем эту табличку и добавим условное форматирование в экселе:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-та-же-самая-табличка-но-с-условным-форматированием">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/14_hu7a814b79bd5bb09a55bce94c2964fce8_584009_2000x2000_fit_lanczos_2.png" data-caption="Та же самая табличка, но с условным форматированием">
+
+
+  <img data-src="/ru/post/cardsorting/14_hu7a814b79bd5bb09a55bce94c2964fce8_584009_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1364" height="831">
+</a>
+
+
+  
+  
+  <figcaption>
+    Та же самая табличка, но с условным форматированием
+  </figcaption>
+
+
+</figure>
+
+<p>Теперь мы уже видим больше. Например, мы легко можем заметить, что Василиск часто находится в одной группе с Драконом (92 раза из 107) и Кракеном (91 раз из 107).</p>
+<p>Но пока непонятно, на какие группы делить и какие выводы мы можем делать.</p>
+<h2 id="кластеризация-дендрограмма">Кластеризация (дендрограмма)</h2>
+<p>Давайте запустим следующий шаг скрипта:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/15_huaf5bbf36a7886fdd430703fd71bb6222_157723_2000x2000_fit_lanczos_2.png" data-caption="Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;">
+
+
+  <img data-src="/ru/post/cardsorting/15_huaf5bbf36a7886fdd430703fd71bb6222_157723_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1248" height="334">
+</a>
+
+
+  
+  
+  <figcaption>
+    Полный код можно скачать <a href="https://github.com/UXRozum/cardsort">тут</a>
+  </figcaption>
+
+
+</figure>
+
+<p>И получается следуюший график:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-дендрограмма-с-разделением-на-6-групп">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/16_hu3f7f327e3a00d5317b32f28b29ab1813_134115_2000x2000_fit_lanczos_2.png" data-caption="Дендрограмма с разделением на 6 групп">
+
+
+  <img data-src="/ru/post/cardsorting/16_hu3f7f327e3a00d5317b32f28b29ab1813_134115_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="900" height="826">
+</a>
+
+
+  
+  
+  <figcaption>
+    Дендрограмма с разделением на 6 групп
+  </figcaption>
+
+
+</figure>
+
+<p>Разберем немного поподробнее, что случилось. Алгоритм edge-betweenness поочередно удаляет те карточки, которые меньше всего связаны с другими, и это позволяет вычислить устоявшиеся группы. А дендрограмма показывает, как логичнее всего разделить карточки, если делить на определенное количество групп. Здесь мы поставили 6, но групп может быть сколько угодно, от 1 до 20 (в нашем случае, потому что карточек всего 20).</p>
+<p><img src="17.gif" alt="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-как-меняется-дендрограмма-с-изменением-количества-групп">
+
+
+  <a data-fancybox="" href="" data-caption="Как меняется дендрограмма с изменением количества групп">
+
+
+  <img src="" alt=""  >
+</a>
+
+
+  
+  
+  <figcaption>
+    Как меняется дендрограмма с изменением количества групп
+  </figcaption>
+
+
+</figure>
+</p>
+<p>Мы уже можем делать выводы о том, как лучше всего разбить карточки, но дендрограмму все еще не очень легко считать одним взглядом, особенно если нет опыта в работе с ними.</p>
+<h2 id="построение-сетевого-графа-визуальный-анализ-результатов">Построение сетевого графа (визуальный анализ результатов)</h2>
+<p>Если то, что мы делали до этого, часто делают при анализе карточек, то сетевые графы встречаются довольно редко.</p>
+<p>Про анализ карточной сортировки с помощью сетевых графов есть прекрасная статья — <a href="https://uxpajournal.org/analyzing-card-sorting-data-using-graph-visualization/" target="_blank" rel="noopener">Analyzing Card-Sorting Data Using Graph VisualizationJUS (uxpajournal.org)</a>, но, кроме этой статьи эта визуализация почти нигде не используется.</p>
+<p>Сетевой граф — это способ визуализации связей между сущностями. В нем каждая сущность отображается в виде точки, а связь между ними отображается как линия.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-вот-пример-сетевого-графа-по-сериалу-madmen-каждая-точка--персонаж-каждая-линия--сексуальная-связь-между-ними">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/18_hufa1615a247f7cb9d8d6d51ee0d6c5de1_131154_2000x2000_fit_lanczos_2.png" data-caption="Вот пример сетевого графа по сериалу Madmen, каждая точка — персонаж, каждая линия — сексуальная связь между ними">
+
+
+  <img data-src="/ru/post/cardsorting/18_hufa1615a247f7cb9d8d6d51ee0d6c5de1_131154_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1152" height="1152">
+</a>
+
+
+  
+  
+  <figcaption>
+    Вот пример сетевого графа по сериалу Madmen, каждая точка — персонаж, каждая линия — сексуальная связь между ними
+  </figcaption>
+
+
+</figure>
+
+<p>Давайте попробуем построить подобный график для наших карточек. Точками (или нодами) будут карточки, а линия — упоминание двух карточек в одной группе</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/19_hubfdfc00193df174bb30ffa61731a081d_360484_2000x2000_fit_lanczos_2.png" data-caption="Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;">
+
+
+  <img data-src="/ru/post/cardsorting/19_hubfdfc00193df174bb30ffa61731a081d_360484_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1400" height="618">
+</a>
+
+
+  
+  
+  <figcaption>
+    Полный код можно скачать <a href="https://github.com/UXRozum/cardsort">тут</a>
+  </figcaption>
+
+
+</figure>
+
+<p>В итоге у нас получается следующее:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-сетевой-график-красиво-правда">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/20_hu03f6e0b0d4e00e4403233c895ee62a97_292072_2000x2000_fit_lanczos_2.png" data-caption="Сетевой график. Красиво, правда?">
+
+
+  <img data-src="/ru/post/cardsorting/20_hu03f6e0b0d4e00e4403233c895ee62a97_292072_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1270" height="947">
+</a>
+
+
+  
+  
+  <figcaption>
+    Сетевой график. Красиво, правда?
+  </figcaption>
+
+
+</figure>
+
+<p>Линии с трудом различимы, их слишком много, чтобы что-то разобрать. С этим надо что-то делать. Попробуем по аналогии с использованным нами ранее алгоритмом кластеризации, постепенно убирать связи. Это довольно просто, нам нужно отнимать число из таблицы сопряжений.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/21_hu61a74b14d86cc2471cb86bcd9a1ac0d4_92718_2000x2000_fit_lanczos_2.png" data-caption="Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;">
+
+
+  <img data-src="/ru/post/cardsorting/21_hu61a74b14d86cc2471cb86bcd9a1ac0d4_92718_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1198" height="260">
+</a>
+
+
+  
+  
+  <figcaption>
+    Полный код можно скачать <a href="https://github.com/UXRozum/cardsort">тут</a>
+  </figcaption>
+
+
+</figure>
+
+<p>Вот например, какой график у нас выходит, если убрать 60% связей:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-вот-теперь-все-понятней">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/22_hu8baec0888ac3841fe3c38a2a8cc00709_146352_2000x2000_fit_lanczos_2.png" data-caption="Вот теперь все понятней">
+
+
+  <img data-src="/ru/post/cardsorting/22_hu8baec0888ac3841fe3c38a2a8cc00709_146352_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1000" height="1000">
+</a>
+
+
+  
+  
+  <figcaption>
+    Вот теперь все понятней
+  </figcaption>
+
+
+</figure>
+
+<p>Теперь мы видим, что деление у нас получилось смешанное, две большие группы по месту обитания (водные и наземные), отдельно насекомые, чайка и гадюка стоят по одиночке. И в отдельной группе — все мифические существа.</p>
+<p>Более наглядно можно посмотреть в динамике:</p>
+<p><img src="23.gif" alt="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-как-изменяется-сетевой-граф-при-отсечении-связей">
+
+
+  <a data-fancybox="" href="" data-caption="Как изменяется сетевой граф при отсечении связей">
+
+
+  <img src="" alt=""  >
+</a>
+
+
+  
+  
+  <figcaption>
+    Как изменяется сетевой граф при отсечении связей
+  </figcaption>
+
+
+</figure>
+</p>
+<h2 id="облака-слов">Облака слов</h2>
+<p>Мы разобрались с группами, но остался один момент: как их обозвать. У нас открытая карточная сортировка, респонденты сами давали группам названия. Эти данные у нас остались, их мы и будем использовать для построения облака слов для каждой группы</p>
+<p>Например, у нас есть группа “Таракан-Паук-Стрекоза”, давайте попробуем их как-то обозвать</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/24_hu5c8494c9c724d43658eb2596e1d7239e_269812_2000x2000_fit_lanczos_2.png" data-caption="Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;">
+
+
+  <img data-src="/ru/post/cardsorting/24_hu5c8494c9c724d43658eb2596e1d7239e_269812_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1400" height="403">
+</a>
+
+
+  
+  
+  <figcaption>
+    Полный код можно скачать <a href="https://github.com/UXRozum/cardsort">тут</a>
+  </figcaption>
+
+
+</figure>
+
+<p>У нас получается вот такое облако:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-облако-слов-для-группы-таракан-паук-стрекоза">
+
+
+  <a data-fancybox="" href="/ru/post/cardsorting/25_hua2e4a48c406f1e3d8ab931418e3037ab_669297_2000x2000_fit_lanczos_2.png" data-caption="Облако слов для группы «Таракан-Паук-Стрекоза»">
+
+
+  <img data-src="/ru/post/cardsorting/25_hua2e4a48c406f1e3d8ab931418e3037ab_669297_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1171" height="711">
+</a>
+
+
+  
+  
+  <figcaption>
+    Облако слов для группы «Таракан-Паук-Стрекоза»
+  </figcaption>
+
+
+</figure>
+
+<p>И вот, мы с вами без особых проблем обработали наши результаты.</p>
+<h2 id="быстрый-вариант">Быстрый вариант</h2>
+<p>Если не хочется делать это все по шагам, есть быстрый вариант</p>
+<ol>
+<li><a href="https://github.com/UXRozum/cardsort" target="_blank" rel="noopener">Скачиваем</a> 2 файла Cards.xlsx и CardSort3.R</li>
+<li>Помещаем их в одну папку</li>
+<li>Открываем скрипт</li>
+<li>Выделяем все строчки с 79 (#Начало) по 128 (#Конец)</li>
+<li>Жмем crtl+enter</li>
+</ol>
+<p>Скрипт сам все сделает за вас: построит и сохранит таблицу совпадений, построит и сохранит дендрограммы (с разбиванием на группы от 1 до количества карточек), построит 19 сетевых графов (с 95% связей до 5% связей), и построит облака слов для каждой карточки.</p>
+<p>Работу с быстрым вариантом я записал на видео, чтобы было нагляднее:</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/WQmqlDw_2wE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="в-заключение">В заключение</h2>
+<p>Спасибо за то, что дочитали до конца, надеюсь это было интересно. Этот скрипт можно использовать для анализа проведенной самостоятельно карточной сортировки — в файл Card.xlsx просто нужно будет подставить свои данные.</p>
+<p>Скрипт и данные можно скачать на моем <a href="https://github.com/UXRozum/cardsort" target="_blank" rel="noopener">гитхабе</a>.</p>
+<p>Если вам понравилась статья, не стесняйтесь ей делиться, пишите свои комменты и обратную связь на <a href="mailto:mail@uxrozum.com">mail@uxrozum.com</a>, или в <a href="t.me/keycee">telegram</a>.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/ru/tag/r/">R</a>
+  
+  <a class="badge badge-light" href="/ru/tag/%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B0%D1%8F-%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BD%D0%B0%D1%8F-%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0/">открытая карточная сортировка</a>
+  
+  <a class="badge badge-light" href="/ru/tag/%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/">Автоматизация</a>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/ru/author/%D1%81%D0%B5%D1%80%D0%B5%D0%B6%D0%B0-%D1%80%D0%BE%D0%B7%D1%83%D0%BC/avatar_hu5b84e11c0a5bed4bec46c4f2fb26b9bd_94813_270x270_fill_q75_lanczos_center.jpg" alt="Сережа Розум">
+    
+
+    <div class="media-body">
+      <h5 class="card-title">Сережа Розум</h5>
+      <h6 class="card-subtitle">UX-исследователь, социолог</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:mail@uxrozum.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/sergey-rozum/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.t.me/keycee" target="_blank" rel="noopener">
+        <i class="fab fa-telegram"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    2025
+  </p>
+
+  
+  
+
+
+
+
+
+
+ <p class="powered-by">
+  
+  </p> 
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Процитировать</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Копия
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Скачать
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+        <div class="search-hit-content">
+          <div class="search-hit-name">
+            <a href="{{relpermalink}}">{{title}}</a>
+            <div class="article-metadata search-hit-type">{{type}}</div>
+            <p class="search-hit-description">{{snippet}}</p>
+          </div>
+        </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/ru/js/wowchemy.min.7381a7f963f52208b466b798604a8553.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="/js/language-redirect.js"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1088 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.0.0-beta.2 for Hugo" />
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Rozum Sergey" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Analyzing how to properly describe usability issues and what they are not" />
+
+  
+    <link rel="alternate" hreflang="ru" href="/ru/post/ideal-usability-problem/" />
+  
+  <link rel="alternate" hreflang="en-us" href="/en/post/ideal-usability-problem/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#7FBBA0" />
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.ac1319ffc611c3fe1c721a0af0a128ba.css" />
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HYQ5BWL319"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-HYQ5BWL319', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/en/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_180x180_fill_lanczos_center_2.png" />
+
+  <link rel="canonical" href="/en/post/ideal-usability-problem/" />
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Rozum S, UXR" />
+  <meta property="og:url" content="/en/post/ideal-usability-problem/" />
+  <meta property="og:title" content="The Ideal Usability Issue | Rozum S, UXR" />
+  <meta property="og:description" content="Analyzing how to properly describe usability issues and what they are not" /><meta property="og:image" content="/en/post/ideal-usability-problem/featured.png" />
+    <meta property="twitter:image" content="/en/post/ideal-usability-problem/featured.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2024-05-18T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2024-05-18T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/en/post/ideal-usability-problem/"
+  },
+  "headline": "The Ideal Usability Issue",
+  
+  "image": [
+    "/en/post/ideal-usability-problem/featured.png"
+  ],
+  
+  "datePublished": "2024-05-18T00:00:00Z",
+  "dateModified": "2024-05-18T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Rozum Sergey"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rozum S, UXR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Analyzing how to properly describe usability issues and what they are not"
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+<script src="/js/language-redirect.js"></script>
+
+  <title>The Ideal Usability Issue | Rozum S, UXR</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.0475bc389b7599ef6b1889ad17c11742.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/en/">Rozum S, UXR</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/en/">Rozum S, UXR</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/#about"><span>About</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/en/post"><span>Articles</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/project"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+
+      
+      
+
+      
+      <li class="nav-item dropdown i18n-dropdown">
+        <a href="#" class="nav-link " data-toggle="dropdown"
+           aria-haspopup="true" aria-label="Languages">
+          <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+        <div class="dropdown-menu">
+          <div class="dropdown-item dropdown-item-active">
+            <span>English</span>
+          </div>
+          
+          <a class="dropdown-item" href="/ru/post/ideal-usability-problem/">
+            <span>Русский</span>
+          </a>
+          
+        </div>
+      </li>
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>The Ideal Usability Issue</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    May 18, 2024
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 405px;">
+  <div style="position: relative">
+    <img src="/en/post/ideal-usability-problem/featured_hu8759e992bc6dd8aea67378a66db0f1d2_3412979_720x0_resize_lanczos_2.png" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p><em>There can never be too many articles dedicated to fundamental topics. That’s why I also decided to dig into the well-worn and widely known subject. Today we’ll talk about the canonical definition and description of a usability issue.</em></p>
+<p>This article deliberately avoids case studies and examples because, right now, it’s especially important to focus on the fundamental principles of usability testing without delving into isolated examples.</p>
+<p>Why do I think this is important? Usability testing is a research method with surprisingly few ambiguities. It is very limited and straightforward, but it is precisely in these limitations that its strength lies. The same applies to its results; we can very clearly define what a usability issue is and how to describe it.</p>
+<p>However, we often feel that we can use this method to cover more than it’s intended for. Such blurring can strip the method of its strengths and reduce trust in our research.</p>
+<h2 id="features-of-usability-testing-as-a-method">Features of Usability Testing as a Method</h2>
+<p>In usability testing, we have a clearly defined object of study — the interface. Our goals and objectives are also unambiguous — we are looking for usability issues encountered by users and measuring the usability of the product being tested.</p>
+<p>Because the object of usability testing is the interface, we can make strong conclusions with a small sample size. We don’t need to worry much about the validity of results, as we’re not studying opinions but the interface itself. We literally see the interface features that lead to problems during the test and understand that they need to be addressed in some way.</p>
+<p>By limiting the scope of the research, we gain a unique advantage in qualitative studies. Our conclusions are far less speculative; we have solid, rigorous arguments. This narrow focus allows us to make conclusions with a sample size that would be microscopic for any other study.</p>
+<p>Most criticism of usability testing results stems from a lack of understanding of these method features. “Can we really trust these participants? Sure, they say it’s inconvenient, but it’s just two people,” or, “How can we be sure other users will encounter the same issues? Maybe your participants are just not smart.” All of this is meaningless if we understand that usability testing evaluates not users, not even their behavior, but the interface. Mistakes made by participants during the test help us identify interface elements that may cause problems in real-world use and understand why they occur. In usability testing, the participant acts as a tool, helping us evaluate the interface.</p>
+<p>However, if we shift the research focus from the interface to the user, problems begin to arise. As a method, usability testing has simple sampling requirements but very limited capacity for studying user opinions and behavior. If we try to study users using this method, our sample size increases, we need to create a 4–8-window structure, and our scenario becomes more complex with added variability. This complicates the analysis, increases our report size, and effectively turns the study into in-depth interviews with elements of usability testing, rather than usability testing itself. This significantly impacts the timelines and costs of the research.</p>
+<p>Alternatively, we might not modify the test methodology but attempt to work with participants and results as if conducting in-depth interviews. This approach likely fails to reach data saturation, resulting in shaky foundations for conclusions that are over-extrapolated. Ultimately, this diminishes the value of the research and undermines its validity in the eyes of stakeholders.</p>
+<p>Therefore, to fully leverage the strengths of usability testing — speed, simplicity, low sample requirements, and clear, unambiguous results — we must consciously keep our research focus under control.</p>
+<h2 id="results-in-usability-testing">Results in Usability Testing</h2>
+<p>In usability testing, we must always distinguish between primary and secondary results. The primary result of usability testing is always a set of usability issues. It may also include insights into the overall usability of the product but nothing more. User expectations, feature requests, product opinions, and usage patterns are also incredibly important, but they are secondary in this particular study. To explore them, we need to use a more appropriate research method. Usability testing will not provide sufficiently strong results in these areas — at most, it will generate hypotheses and ideas for subsequent, more methodologically valid studies.</p>
+<p>This brings us to the idea of the ideal usability issue description.</p>
+<p>To describe the ideal usability issue, we turn to the classic definition of usability:</p>
+<blockquote>
+<p>Extent to which a product can be used by specified users to achieve specified goals with effectiveness, efficiency, and satisfaction in a specified context of use.</p>
+</blockquote>
+<p>From this definition, we can derive the definition of a usability issue:</p>
+<blockquote>
+<p>A usability issue is a feature of the interface that hinders the effective and efficient completion of user tasks and reduces user satisfaction with the system.</p>
+</blockquote>
+<p>This definition is important because it also allows us to outline what a usability issue is not:</p>
+<p><strong>A usability issue cannot be the lack of desire to perform an action in the product.</strong> It cannot manifest as a user not wanting to do something. We deliberately narrow our focus in usability testing to exclude questions of willingness to use a product or its features. Studying feature demand is more complex than studying usability and requires a different research method.</p>
+<p><strong>A usability issue cannot be a bug</strong> because a bug is inherently incorrect system behavior. If we try to study bugs or technical system properties (e.g., data loading speed, animation performance) through usability testing, we risk drawing conclusions from an inherently flawed sample. Proper technical testing requires a dedicated device setup and specialized testing methods. That’s why QA testing is often a separate function in a company, operating on a different principle than usability testing.</p>
+<p><strong>A usability issue cannot be a lack of functionality.</strong> In usability testing, we study the ease of use of existing product features. We may receive comments about missing features, but these should always serve as a basis for further research, not as standalone results.</p>
+<p><strong>A usability issue is not the absence of a solution</strong> because a problem is a problem, not the absence of a solution. This distinction is subtle. A usability issue is a property of the interface, an element that hinders product use. If we frame a problem as “Feature X is missing,” we miss the opportunity to address the usability issue in other ways. It’s like going to a doctor and saying, “I lack painkillers” instead of “I have a headache.” While technically possible, this approach limits us to one solution that may not be the best.</p>
+<h2 id="the-ideal-usability-issue">The Ideal Usability Issue</h2>
+<p>Based on all the above, we can define the ideal usability issue description:</p>
+<p>A usability issue should include:</p>
+<ul>
+<li>
+<p><strong>A description of the interface property that causes the problem.</strong> We need to describe how the problematic element works, as it is the source of the issue.</p>
+</li>
+<li>
+<p><strong>An explanation of why this system behavior is problematic.</strong> This allows us to describe the problem&rsquo;s mechanism and argue why we consider it a usability issue. It’s especially important to outline the participant’s actions with the problematic element that lead to difficulties.</p>
+</li>
+<li>
+<p><strong>A description of the problem’s impact on usability.</strong> By definition, usability issues reduce key usability metrics, and it’s essential to demonstrate this negative impact.</p>
+</li>
+</ul>
+<p>We can further illustrate the usability issue with participant quotes and add recommendations for resolution.</p>
+<p>As we see, participant opinions are not the essence of a usability issue but its illustration. This is particularly important because the object of our study is the interface, not the user.</p>
+<p>By strictly adhering to the constraints of usability testing, conducting and processing results will take significantly less time and resources compared to in-depth interviews. This is why I believe usability testing should be as simple as a hammer. Its strength lies in these limitations.</p>
+<p>In this article, I’ve tried to thoroughly describe my understanding of usability testing and the description of its results. As with everything I write, this represents my personal professional opinion rather than a textbook or objective truth. In any case, feel free to write to me and share feedback — I always enjoy and appreciate reading it.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/en/tag/usability-testing/">Usability Testing</a>
+  
+  <a class="badge badge-light" href="/en/tag/usability-issues/">Usability Issues</a>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/en/author/rozum-sergey/avatar_hu5b84e11c0a5bed4bec46c4f2fb26b9bd_94813_270x270_fill_q75_lanczos_center.jpg" alt="Rozum Sergey">
+    
+
+    <div class="media-body">
+      <h5 class="card-title">Rozum Sergey</h5>
+      <h6 class="card-subtitle">UX-researcher, sociologist</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:mail@uxrozum.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/sergey-rozum/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.t.me/keycee" target="_blank" rel="noopener">
+        <i class="fab fa-telegram"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    2025
+  </p>
+
+  
+  
+
+
+
+
+
+
+ <p class="powered-by">
+  
+  </p> 
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+        <div class="search-hit-content">
+          <div class="search-hit-name">
+            <a href="{{relpermalink}}">{{title}}</a>
+            <div class="article-metadata search-hit-type">{{type}}</div>
+            <p class="search-hit-description">{{snippet}}</p>
+          </div>
+        </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.2d2808811d032d76b15fb8334411e7f5.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="/js/language-redirect.js"></script>
+
+
+
+
+</body>
+</html>

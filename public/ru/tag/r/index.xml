@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R | Rozum S, UXR</title>
+    <link>/ru/tag/r/</link>
+      <atom:link href="/ru/tag/r/index.xml" rel="self" type="application/rss+xml" />
+    <description>R</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>ru</language><copyright>2025</copyright><lastBuildDate>Mon, 27 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_512x512_fill_lanczos_center_2.png</url>
+      <title>R</title>
+      <link>/ru/tag/r/</link>
+    </image>
+    
+    <item>
+      <title>Открытая карточная сортировка — быстро обрабатываем с помощью R</title>
+      <link>/ru/post/cardsorting/</link>
+      <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>/ru/post/cardsorting/</guid>
+      <description>&lt;p&gt;Карточная сортировка — отличный способ организовать информационную архитектуру сайта или приложения. Ее несложно собирать, но с обработкой могут возникнуть проблемы. Руками полученный массив данных обрабатывать очень напряжно.&lt;/p&gt;
+&lt;p&gt;Если собирали с помощью онлайн-сервиса, то можно попробовать воспользоваться встроенными инструментами обработки, но они не всегда дают понятный результат. Мы можем часами вглядываться в таблицу соответствий и не понимать, что с ней делать. Дендрограммы уже по лучше, но не везде можно их построить, и сами они выглядят не очень понятно.&lt;/p&gt;
+&lt;p&gt;Сегодня я хотел бы поделиться простым и легким способом обработать результаты карточной сортировки таким образом, чтобы и самому не запутаться, и заказчику представить в понятном и простом виде.&lt;/p&gt;
+&lt;h2 id=&#34;немного-о-карточной-сортировке&#34;&gt;Немного о карточной сортировке&lt;/h2&gt;
+&lt;p&gt;Карточная сортировка — это качественно-количественный метод для поиска наиболее оптимального разделения неких сущностей на группы. Ее можно использовать, чтобы выстроить удобную навигацию в приложении, разбить товары на понятные категории.&lt;/p&gt;
+&lt;p&gt;Респонденту предлагаются карточки, которые необходимо разделить на группы. Респондент может распределить карточки по группам любым логичным для него способом.&lt;/p&gt;
+&lt;p&gt;Если у нас уже есть готовый набор групп, то сортировка называется закрытой. Если респондент сам может делать столько групп, сколько считает нужным, и называть их, то это открытая карточная сортировка.&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-как-выглядит-карточная-сортировка&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/1_huf435d52250b10177ac53d9e8a9f3967a_199624_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Как выглядит карточная сортировка&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/1_huf435d52250b10177ac53d9e8a9f3967a_199624_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1960&#34; height=&#34;1793&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Как выглядит карточная сортировка
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Хорошая практика — поговорить с респондентом о том, почему он (или она) разделил карточки именно так, а не иначе. На очном исследовании это работает лучше, чем на удаленном.&lt;/p&gt;
+&lt;p&gt;Также есть обратная карточная сортировка, или же tree testing, с ее помощью можно тестировать уже готовую структуру.&lt;/p&gt;
+&lt;p&gt;В нашем случае мы будем говорить об открытой карточной сортировке.&lt;/p&gt;
+&lt;h2 id=&#34;немного-о-данных-с-которыми-мы-будем-работать&#34;&gt;Немного о данных, с которыми мы будем работать&lt;/h2&gt;
+&lt;p&gt;Когда я думал об этой статье, я не смог найти открытых тестовых датасетов для карточной сортировки. А генерировать данные самостоятельно не очень хотелось. Поэтому я решил собрать собственный &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;датасет&lt;/a&gt;, он доступен любому и каждому.&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-так-выглядел-пост-с-предложением-пройти-опрос&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/2_hu5ab31b612e3754be50535ca75eed0886_30126_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Так выглядел пост с предложением пройти опрос&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/2_hu5ab31b612e3754be50535ca75eed0886_30126_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;520&#34; height=&#34;285&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Так выглядел пост с предложением пройти опрос
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Заданием было распределить по группам 20 разных зверюшек. Я специально постарался составить карточки так, чтобы не было очевидно правильного разделения:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-карточки-которые-надо-было-разделить&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/3_hu5bb6c2e34b21c9470603f50583496312_128956_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Карточки, которые надо было разделить&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/3_hu5bb6c2e34b21c9470603f50583496312_128956_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1400&#34; height=&#34;980&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Карточки, которые надо было разделить
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Получилось 107 ответов, спасибо всем, кто участвовал в сборе данных! Собранные результаты я выкачал и почистил, получилась следующая табличка:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-сырые-данные-их-можно-скачать-и-посмотреть-самостоятельно&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/4_huac0f94f21f59144b100888d9a6bb7c01_523399_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Сырые данные, их можно скачать и посмотреть самостоятельно&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/4_huac0f94f21f59144b100888d9a6bb7c01_523399_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1780&#34; height=&#34;879&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Сырые данные, их можно скачать и посмотреть самостоятельно
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Почти все переменные были созданы автоматически, я добавил только столбец “Group_tag” — в нем я протегировал группы на свое усмотрение по основанию классификации.&lt;/p&gt;
+&lt;p&gt;Получилось следующее распределение:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/5_hu38c317f750a2be554404bf11a9757f7c_56560_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/5_hu38c317f750a2be554404bf11a9757f7c_56560_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;694&#34; height=&#34;635&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Смешанное разделение — это то, где нельзя точно определить одно основание разделения. Биологическое — это когда люди делили зверей примерно так, как мы помним по урокам биологии (например: пресмыкающиеся, птицы, млекопитающие). При этом часто респонденты при биологическом разделении часто выносили несуществующих зверей в отдельную категорию.&lt;/p&gt;
+&lt;h2 id=&#34;анализ-результатов&#34;&gt;Анализ результатов&lt;/h2&gt;
+&lt;p&gt;Для того чтобы обработать результаты, нам потребуется программа Rstudio. Она бесплатная, скачать ее можно &lt;a href=&#34;https://posit.co/download/rstudio-desktop/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;здесь&lt;/a&gt;. Rstudio можно поставить как на Windows, так и на Mac.&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-так-выглядит-интерфейс-rstudio&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/6_hu427658ac0f30b76ea4f0f42ce594d0a6_556539_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Так выглядит интерфейс RStudio&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/6_hu427658ac0f30b76ea4f0f42ce594d0a6_556539_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1920&#34; height=&#34;1047&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Так выглядит интерфейс RStudio
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Готовый скрипт для обработки скачиваем &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;тут&lt;/a&gt;, и открываем, я постарался в нем все расписать по шагам.&lt;/p&gt;
+&lt;h2 id=&#34;подготовка-к-работе&#34;&gt;Подготовка к работе&lt;/h2&gt;
+&lt;p&gt;Прежде всего нам нужно поставить и запустить нужные библиотеки:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/7_huca15c1579512d0d074a40eaca33e7a22_217009_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Полный код можно скачать &amp;lt;a href=&amp;#34;https://github.com/UXRozum/cardsort&amp;#34;&amp;gt;тут&amp;lt;/a&amp;gt;&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/7_huca15c1579512d0d074a40eaca33e7a22_217009_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1400&#34; height=&#34;439&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Для того чтобы запустить код, нужно выделить его и нажать ctrl+enter&lt;/p&gt;
+&lt;p&gt;После установки нам выдаст следующее сообщение:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/8_hu103e06042e5963bcf277e9323fdf5b1e_32612_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Полный код можно скачать &amp;lt;a href=&amp;#34;https://github.com/UXRozum/cardsort&amp;#34;&amp;gt;тут&amp;lt;/a&amp;gt;&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/8_hu103e06042e5963bcf277e9323fdf5b1e_32612_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;549&#34; height=&#34;134&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;После загрузки пакетов с командой library будет много разных предупреждений, но их можно не пугаться:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/9_hu4b3920943c6883b9be6bde20d664050c_81375_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Полный код можно скачать &amp;lt;a href=&amp;#34;https://github.com/UXRozum/cardsort&amp;#34;&amp;gt;тут&amp;lt;/a&amp;gt;&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/9_hu4b3920943c6883b9be6bde20d664050c_81375_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;643&#34; height=&#34;273&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Теперь мы готовы работать с данными&lt;/p&gt;
+&lt;h2 id=&#34;загрузка-данных-в-rstudio&#34;&gt;Загрузка данных в Rstudio&lt;/h2&gt;
+&lt;p&gt;Сначала нам нужно загрузить файл Card.xlsx, который находится &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;тут&lt;/a&gt;. Файл должен находиться в отдельной папке, название папки в идеале — на латинице.&lt;/p&gt;
+&lt;p&gt;Чтобы выгрузить данные из нашей эксельки Card.xlsx мы используем следующие команды:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/10_hu0827c0ae42794ca9a42512c3eb749d6b_361069_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Полный код можно скачать &amp;lt;a href=&amp;#34;https://github.com/UXRozum/cardsort&amp;#34;&amp;gt;тут&amp;lt;/a&amp;gt;&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/10_hu0827c0ae42794ca9a42512c3eb749d6b_361069_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1400&#34; height=&#34;493&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Rstudio предложит нам выбрать папку, где находится Card.xlsx. Далее в эту папку будут сохраняться результаты нашего анализа.&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-теперь-у-нас-есть-датасет-raw-с-ним-мы-будем-дальше-работать&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/11_hu7f559066df5c7c7af6f06b6f34a1e3ef_86667_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Теперь у нас есть датасет Raw, с ним мы будем дальше работать&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/11_hu7f559066df5c7c7af6f06b6f34a1e3ef_86667_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;591&#34; height=&#34;258&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Теперь у нас есть датасет Raw, с ним мы будем дальше работать
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;создание-таблицы-совпадений&#34;&gt;Создание таблицы совпадений&lt;/h2&gt;
+&lt;p&gt;Таблица совпадений - это таблица, в которой показано, сколько раз каждая пара карточек находилась в одной группе. Чтобы создать такую табличку и сохранить ее в нашей папке, запускаем следующие команды:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/12_hu0060db969ec0ce8c53a294fae03d3e9f_179307_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Полный код можно скачать &amp;lt;a href=&amp;#34;https://github.com/UXRozum/cardsort&amp;#34;&amp;gt;тут&amp;lt;/a&amp;gt;&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/12_hu0060db969ec0ce8c53a294fae03d3e9f_179307_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1030&#34; height=&#34;408&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Получившийся файл называется Adjacency.xlsx, давайте посмотрим, что у него внутри&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-табличка-совпадений&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/13_hua34a12cb30239f07934abb653012c43f_329115_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Табличка совпадений&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/13_hua34a12cb30239f07934abb653012c43f_329115_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1358&#34; height=&#34;413&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Табличка совпадений
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;В этой табличке мы видим, что, например, карточки “Гадюка” и “Василиск” находились в одной группе 9 раз, из возможных 107. Давайте немного причешем эту табличку и добавим условное форматирование в экселе:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-та-же-самая-табличка-но-с-условным-форматированием&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/14_hu7a814b79bd5bb09a55bce94c2964fce8_584009_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Та же самая табличка, но с условным форматированием&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/14_hu7a814b79bd5bb09a55bce94c2964fce8_584009_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1364&#34; height=&#34;831&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Та же самая табличка, но с условным форматированием
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Теперь мы уже видим больше. Например, мы легко можем заметить, что Василиск часто находится в одной группе с Драконом (92 раза из 107) и Кракеном (91 раз из 107).&lt;/p&gt;
+&lt;p&gt;Но пока непонятно, на какие группы делить и какие выводы мы можем делать.&lt;/p&gt;
+&lt;h2 id=&#34;кластеризация-дендрограмма&#34;&gt;Кластеризация (дендрограмма)&lt;/h2&gt;
+&lt;p&gt;Давайте запустим следующий шаг скрипта:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/15_huaf5bbf36a7886fdd430703fd71bb6222_157723_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Полный код можно скачать &amp;lt;a href=&amp;#34;https://github.com/UXRozum/cardsort&amp;#34;&amp;gt;тут&amp;lt;/a&amp;gt;&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/15_huaf5bbf36a7886fdd430703fd71bb6222_157723_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1248&#34; height=&#34;334&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;И получается следуюший график:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-дендрограмма-с-разделением-на-6-групп&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/16_hu3f7f327e3a00d5317b32f28b29ab1813_134115_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Дендрограмма с разделением на 6 групп&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/16_hu3f7f327e3a00d5317b32f28b29ab1813_134115_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;900&#34; height=&#34;826&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Дендрограмма с разделением на 6 групп
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Разберем немного поподробнее, что случилось. Алгоритм edge-betweenness поочередно удаляет те карточки, которые меньше всего связаны с другими, и это позволяет вычислить устоявшиеся группы. А дендрограмма показывает, как логичнее всего разделить карточки, если делить на определенное количество групп. Здесь мы поставили 6, но групп может быть сколько угодно, от 1 до 20 (в нашем случае, потому что карточек всего 20).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;17.gif&#34; alt=&#34;&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-как-меняется-дендрограмма-с-изменением-количества-групп&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;&#34; data-caption=&#34;Как меняется дендрограмма с изменением количества групп&#34;&gt;
+
+
+  &lt;img src=&#34;&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Как меняется дендрограмма с изменением количества групп
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Мы уже можем делать выводы о том, как лучше всего разбить карточки, но дендрограмму все еще не очень легко считать одним взглядом, особенно если нет опыта в работе с ними.&lt;/p&gt;
+&lt;h2 id=&#34;построение-сетевого-графа-визуальный-анализ-результатов&#34;&gt;Построение сетевого графа (визуальный анализ результатов)&lt;/h2&gt;
+&lt;p&gt;Если то, что мы делали до этого, часто делают при анализе карточек, то сетевые графы встречаются довольно редко.&lt;/p&gt;
+&lt;p&gt;Про анализ карточной сортировки с помощью сетевых графов есть прекрасная статья — &lt;a href=&#34;https://uxpajournal.org/analyzing-card-sorting-data-using-graph-visualization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Analyzing Card-Sorting Data Using Graph VisualizationJUS (uxpajournal.org)&lt;/a&gt;, но, кроме этой статьи эта визуализация почти нигде не используется.&lt;/p&gt;
+&lt;p&gt;Сетевой граф — это способ визуализации связей между сущностями. В нем каждая сущность отображается в виде точки, а связь между ними отображается как линия.&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-вот-пример-сетевого-графа-по-сериалу-madmen-каждая-точка--персонаж-каждая-линия--сексуальная-связь-между-ними&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/18_hufa1615a247f7cb9d8d6d51ee0d6c5de1_131154_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Вот пример сетевого графа по сериалу Madmen, каждая точка — персонаж, каждая линия — сексуальная связь между ними&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/18_hufa1615a247f7cb9d8d6d51ee0d6c5de1_131154_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1152&#34; height=&#34;1152&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Вот пример сетевого графа по сериалу Madmen, каждая точка — персонаж, каждая линия — сексуальная связь между ними
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Давайте попробуем построить подобный график для наших карточек. Точками (или нодами) будут карточки, а линия — упоминание двух карточек в одной группе&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/19_hubfdfc00193df174bb30ffa61731a081d_360484_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Полный код можно скачать &amp;lt;a href=&amp;#34;https://github.com/UXRozum/cardsort&amp;#34;&amp;gt;тут&amp;lt;/a&amp;gt;&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/19_hubfdfc00193df174bb30ffa61731a081d_360484_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1400&#34; height=&#34;618&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;В итоге у нас получается следующее:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-сетевой-график-красиво-правда&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/20_hu03f6e0b0d4e00e4403233c895ee62a97_292072_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Сетевой график. Красиво, правда?&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/20_hu03f6e0b0d4e00e4403233c895ee62a97_292072_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1270&#34; height=&#34;947&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Сетевой график. Красиво, правда?
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Линии с трудом различимы, их слишком много, чтобы что-то разобрать. С этим надо что-то делать. Попробуем по аналогии с использованным нами ранее алгоритмом кластеризации, постепенно убирать связи. Это довольно просто, нам нужно отнимать число из таблицы сопряжений.&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/21_hu61a74b14d86cc2471cb86bcd9a1ac0d4_92718_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Полный код можно скачать &amp;lt;a href=&amp;#34;https://github.com/UXRozum/cardsort&amp;#34;&amp;gt;тут&amp;lt;/a&amp;gt;&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/21_hu61a74b14d86cc2471cb86bcd9a1ac0d4_92718_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1198&#34; height=&#34;260&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Вот например, какой график у нас выходит, если убрать 60% связей:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-вот-теперь-все-понятней&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/22_hu8baec0888ac3841fe3c38a2a8cc00709_146352_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Вот теперь все понятней&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/22_hu8baec0888ac3841fe3c38a2a8cc00709_146352_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1000&#34; height=&#34;1000&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Вот теперь все понятней
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Теперь мы видим, что деление у нас получилось смешанное, две большие группы по месту обитания (водные и наземные), отдельно насекомые, чайка и гадюка стоят по одиночке. И в отдельной группе — все мифические существа.&lt;/p&gt;
+&lt;p&gt;Более наглядно можно посмотреть в динамике:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;23.gif&#34; alt=&#34;&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-как-изменяется-сетевой-граф-при-отсечении-связей&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;&#34; data-caption=&#34;Как изменяется сетевой граф при отсечении связей&#34;&gt;
+
+
+  &lt;img src=&#34;&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Как изменяется сетевой граф при отсечении связей
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;облака-слов&#34;&gt;Облака слов&lt;/h2&gt;
+&lt;p&gt;Мы разобрались с группами, но остался один момент: как их обозвать. У нас открытая карточная сортировка, респонденты сами давали группам названия. Эти данные у нас остались, их мы и будем использовать для построения облака слов для каждой группы&lt;/p&gt;
+&lt;p&gt;Например, у нас есть группа “Таракан-Паук-Стрекоза”, давайте попробуем их как-то обозвать&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-полный-код-можно-скачать-тутhttpsgithubcomuxrozumcardsort&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/24_hu5c8494c9c724d43658eb2596e1d7239e_269812_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Полный код можно скачать &amp;lt;a href=&amp;#34;https://github.com/UXRozum/cardsort&amp;#34;&amp;gt;тут&amp;lt;/a&amp;gt;&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/24_hu5c8494c9c724d43658eb2596e1d7239e_269812_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1400&#34; height=&#34;403&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Полный код можно скачать &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34;&gt;тут&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;У нас получается вот такое облако:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-облако-слов-для-группы-таракан-паук-стрекоза&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/ru/post/cardsorting/25_hua2e4a48c406f1e3d8ab931418e3037ab_669297_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Облако слов для группы «Таракан-Паук-Стрекоза»&#34;&gt;
+
+
+  &lt;img data-src=&#34;/ru/post/cardsorting/25_hua2e4a48c406f1e3d8ab931418e3037ab_669297_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1171&#34; height=&#34;711&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Облако слов для группы «Таракан-Паук-Стрекоза»
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;И вот, мы с вами без особых проблем обработали наши результаты.&lt;/p&gt;
+&lt;h2 id=&#34;быстрый-вариант&#34;&gt;Быстрый вариант&lt;/h2&gt;
+&lt;p&gt;Если не хочется делать это все по шагам, есть быстрый вариант&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/UXRozum/cardsort&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Скачиваем&lt;/a&gt; 2 файла Cards.xlsx и CardSort3.R&lt;/li&gt;
+&lt;li&gt;Помещаем их в одну папку&lt;/li&gt;
+&lt;li&gt;Открываем скрипт&lt;/li&gt;
+&lt;li&gt;Выделяем все строчки с 79 (#Начало) по 128 (#Конец)&lt;/li&gt;
+&lt;li&gt;Жмем crtl+enter&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Скрипт сам все сделает за вас: построит и сохранит таблицу совпадений, построит и сохранит дендрограммы (с разбиванием на группы от 1 до количества карточек), построит 19 сетевых графов (с 95% связей до 5% связей), и построит облака слов для каждой карточки.&lt;/p&gt;
+&lt;p&gt;Работу с быстрым вариантом я записал на видео, чтобы было нагляднее:&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/WQmqlDw_2wE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;в-заключение&#34;&gt;В заключение&lt;/h2&gt;
+&lt;p&gt;Спасибо за то, что дочитали до конца, надеюсь это было интересно. Этот скрипт можно использовать для анализа проведенной самостоятельно карточной сортировки — в файл Card.xlsx просто нужно будет подставить свои данные.&lt;/p&gt;
+&lt;p&gt;Скрипт и данные можно скачать на моем &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;гитхабе&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Если вам понравилась статья, не стесняйтесь ей делиться, пишите свои комменты и обратную связь на &lt;a href=&#34;mailto:mail@uxrozum.com&#34;&gt;mail@uxrozum.com&lt;/a&gt;, или в &lt;a href=&#34;t.me/keycee&#34;&gt;telegram&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Скрипт для открытой карточной сортировки</title>
+      <link>/ru/project/cardsort/</link>
+      <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>/ru/project/cardsort/</guid>
+      <description>&lt;p&gt;CardSort — это скрипт на языке R, созданный для обработки данных из карточных сортировок, генерации визуализаций и аналитических отчетов. Этот инструмент упрощает анализ, позволяя UX-исследователям и дизайнерам быстрее и точнее выявлять пользовательскую логику группировки элементов.&lt;/p&gt;
+&lt;h2 id=&#34;зачем-нужен-этот-скрипт&#34;&gt;Зачем нужен этот скрипт?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Экономия времени.&lt;/strong&gt; Автоматическая обработка данных из инструментов карточной сортировки, таких как OptimalSort, снижает затраты на ручной анализ.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Информативная визуализация.&lt;/strong&gt; Скрипт генерирует дендрограммы, матрицы сходства и другие полезные графики, которые помогают понять пользовательские предпочтения.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Глубокий анализ.&lt;/strong&gt; Выявление паттернов группировки и расчет метрик согласованности.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;как-работает-cardsort&#34;&gt;Как работает CardSort?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Загрузка данных.&lt;/strong&gt; Скрипт принимает данные карточной сортировки в формате CSV.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Обработка данных.&lt;/strong&gt; На основе пользовательских группировок создаются матрицы сходства и рассчитываются метрики.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Генерация отчетов.&lt;/strong&gt; Создаются:
+&lt;ul&gt;
+&lt;li&gt;Матрица сходства, отражающая частоту совместной группировки элементов.&lt;/li&gt;
+&lt;li&gt;Дендрограмма, визуализирующая, как пользователи объединяли элементы.&lt;/li&gt;
+&lt;li&gt;Сетевой граф связей между карточками.&lt;/li&gt;
+&lt;li&gt;Облака слов для названий групп.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;как-пользоваться-скриптом&#34;&gt;Как пользоваться скриптом?&lt;/h2&gt;
+&lt;p&gt;Подробно использвоание скрипта я описал в &lt;a href=&#34;https://www.uxrozum.com/ru/post/cardsorting/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;этой статье&lt;/a&gt;. Пример работы скрипта на этом видео:
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/WQmqlDw_2wE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;скачать&#34;&gt;Скачать&lt;/h2&gt;
+&lt;p&gt;Скачать этот скрипт и тестовые данные можно на моем &lt;a href=&#34;https://github.com/UXRozum/cardsort&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;гитхабе&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Digital Ethnography | Rozum S, UXR</title>
+    <link>/en/tag/digital-ethnography/</link>
+      <atom:link href="/en/tag/digital-ethnography/index.xml" rel="self" type="application/rss+xml" />
+    <description>Digital Ethnography</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>2025</copyright><lastBuildDate>Fri, 05 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_512x512_fill_lanczos_center_2.png</url>
+      <title>Digital Ethnography</title>
+      <link>/en/tag/digital-ethnography/</link>
+    </image>
+    
+    <item>
+      <title>Innovations — Searching for a New Descriptive Language</title>
+      <link>/en/post/innovatons/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>/en/post/innovatons/</guid>
+      <description>&lt;p&gt;&lt;em&gt;TL;DR: Our approach to innovations is incorrect, leading to futile research. Let&amp;rsquo;s adopt a more suitable language for describing and researching innovations, and everything will fall into place.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;disruptive-innovations&#34;&gt;Disruptive Innovations&lt;/h2&gt;
+&lt;p&gt;When we talk about innovation, something grand immediately comes to mind. In popular culture, a startup founder is always someone aiming to change the world. In product development culture, the concept of &amp;ldquo;disruptive innovation&amp;rdquo; — an innovation that fundamentally changes the market — remains alive and well. It is contrasted with &amp;ldquo;sustaining innovation,&amp;rdquo; which merely improves existing products.&lt;/p&gt;
+&lt;p&gt;The term &amp;ldquo;Disruptive Innovation&amp;rdquo; was popularized by Clayton Christensen in his article &lt;em&gt;&amp;ldquo;Disruptive Technologies: Catching the Wave.&amp;quot;&lt;/em&gt; The article discusses the evolution of product characteristics and how companies respond to this evolution. He argues that the development of a specific technical attribute (e.g., sound quality in radios) often reaches the limits of current technology. Technologies that prioritize seemingly less important attributes at the expense of the primary ones become &amp;ldquo;disruptive,&amp;rdquo; creating new markets and applications. For instance, Sony sacrificed sound quality to create portable radios. Thus, the article concludes that companies should pay less attention to user preferences and more to technologies that seem misaligned with those needs. New technologies create new markets and new users.&lt;/p&gt;
+&lt;p&gt;This idea makes sense when talking about technology. However, product owners often transfer this understanding from the technological realm to the semantic realm. We assume that the right product radically alters established habits. Examples like Amazon, Netflix, and Twitter are often cited as having upended many familiar practices. If people can&amp;rsquo;t accurately predict the technical features they need, then their habits and opinions can also be ignored — they’ll adapt.&lt;/p&gt;
+&lt;p&gt;In reality, it’s the opposite. A product or technology is never the source of behavioral change. The better a product integrates into our existing consumption patterns, the more it adapts to and fits our needs, the more likely it is to create a &amp;ldquo;market revolution.&amp;rdquo; Misunderstanding this leads us to extend the principle of disruptive innovation from product attributes into the very life of potential users.&lt;/p&gt;
+&lt;p&gt;A popular (though dubious) quote attributed to Henry Ford illustrates this point: &amp;ldquo;If I had asked people what they wanted, they would have said, &amp;lsquo;a faster horse.&#39;&amp;rdquo; What’s often overlooked is that even if Ford didn’t literally create a faster horse, he still relied on existing habits around machinery. For example, early tractors weren’t just vehicles; they also powered various farming operations. Cars seamlessly integrated into everyday life, and only later did society evolve new patterns that spurred further automotive development.&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-here-we-see-how-farmers-accustomed-to-horses-modified-fords-tractor-to-work-with-their-familiar-horse-drawn-carts-and-plows&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/innovatons/1_hu1aef14e6768d46725df3a9acc012a698_497758_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Here we see how farmers, accustomed to horses, modified Ford&amp;amp;rsquo;s tractor to work with their familiar horse-drawn carts and plows&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/innovatons/1_hu1aef14e6768d46725df3a9acc012a698_497758_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1076&#34; height=&#34;752&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Here we see how farmers, accustomed to horses, modified Ford&amp;rsquo;s tractor to work with their familiar horse-drawn carts and plows
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;If we examine our own experience with digital technology, we’ll find that the cause-and-effect relationship is cyclical, not linear. It’s not “product → behavior” but “behavior → product → behavior.” Instagram didn’t teach people to post or edit photos online. It simplified an action people were already doing. Then users adapted the product to their existing habits, and only after that did the practice of photo posting evolve.&lt;/p&gt;
+&lt;p&gt;Human habits and communication patterns are the biggest sources of innovation, not the other way around. For innovation to succeed, it shouldn’t change lives; at first, it must integrate into them.&lt;/p&gt;
+&lt;h2 id=&#34;the-tragedy-of-the-milkshake&#34;&gt;The Tragedy of the Milkshake&lt;/h2&gt;
+&lt;p&gt;A simple example from my life: in my bedroom, there’s a heater. It’s internet-connected and comes with a remote control. Obviously, the remote is more convenient than a smartphone app — you just reach over and press a button. In contrast, using the phone requires opening the app, selecting the heater, and then turning it on.&lt;/p&gt;
+&lt;p&gt;But I’ve noticed a pattern: when I’m in bed before sleep, I turn on the heater using my phone instead of the more straightforward remote lying right next to me. Why? The answer is simple: my phone is always in my hand. The smartphone is an extension of myself, making it easier to click a few buttons than to switch contexts to a separate device. Using the phone integrates better into my daily life than the seemingly more convenient remote.&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-remote-seems-faster-and-easier-but-in-reality-the-phone-is-always-at-hand-while-the-remote-is-not&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/en/post/innovatons/2_hud2701fb24886b19deccc5c6f2b6e9470_4078611_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;The remote seems faster and easier, but in reality, the phone is always at hand, while the remote is not&#34;&gt;
+
+
+  &lt;img data-src=&#34;/en/post/innovatons/2_hud2701fb24886b19deccc5c6f2b6e9470_4078611_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2734&#34; height=&#34;2156&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    The remote seems faster and easier, but in reality, the phone is always at hand, while the remote is not
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Ignoring the context of product usage can lead to seemingly logical, beneficial decisions that ultimately fail to gain popularity. Users would need to adapt too much to use such solutions. New products and features should act like a missing puzzle piece, seamlessly fitting into the user&amp;rsquo;s environment. When we aim to make product development revolutionary, we end up forcing users into something unnatural.&lt;/p&gt;
+&lt;p&gt;This is an obvious thought and is repeatedly emphasized in the &lt;em&gt;Jobs To Be Done&lt;/em&gt; (JTBD) framework. One of its popularizers, Christensen, also coined the term “Disruptive Innovations.” JTBD is well-known and widely used, advocating for studying the context of product usage. Yet, based on my experience with its practical application, I believe we often misunderstand its essence — and perhaps even Christensen himself did.&lt;/p&gt;
+&lt;p&gt;My attitude toward JTBD has shifted over time. At first, I saw it as a trendy buzzword for people unfamiliar with marketing. Then, it grew in my eyes to a product creation framework, a useful metaphor for IT professionals. It establishes its terminology, better describing the structure of human needs for &amp;ldquo;techies.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;But now I see that JTBD contains a profound intuition about the essence of innovation. It seems Christensen struggled to convey this clearly, and after being distilled through courses and simplifications, JTBD has lost much of its essence for many.&lt;/p&gt;
+&lt;p&gt;The overused &amp;ldquo;milkshake case&amp;rdquo; is particularly illustrative (though later debunked in Jim Kalbach’s &lt;em&gt;Jobs to Be Done Playbook&lt;/em&gt;). This case is often cited as an example of innovation that dramatically boosted milkshake sales. I won’t retell it — you can read it here. It seems simple: talk to users, understand what job they’re &amp;ldquo;hiring&amp;rdquo; the product for (sometimes even asking directly), and they’ll tell you what features to implement.&lt;/p&gt;
+&lt;p&gt;In reality, it’s more complex. The habit of eating before work has always existed and will continue, regardless of milkshakes. Milkshakes simplify the act of eating on the way to work with minimal effort. After studying this process, creators realized that thickening the milkshake would make it better suited for this context. Despite its depth, this case is often reduced to, &amp;ldquo;Just talk to the user, and they’ll tell you what they need.&amp;rdquo; I find this tragic.&lt;/p&gt;
+&lt;p&gt;The terms &lt;em&gt;Disruptive Technologies&lt;/em&gt; and the milkshake example from JTBD are often interpreted in opposing ways. We’re told not to focus on user needs, yet simultaneously to talk to users so they can tell us what they require.&lt;/p&gt;
+&lt;h2 id=&#34;resolving-the-contradiction&#34;&gt;Resolving the Contradiction&lt;/h2&gt;
+&lt;p&gt;This contradiction arises only when JTBD is misunderstood. Christensen clearly differentiates between &amp;ldquo;function&amp;rdquo; and &amp;ldquo;job.&amp;rdquo; This may seem like semantics, but the distinction is critical for understanding product usage. The term &amp;ldquo;job&amp;rdquo; reflects the fact that users adapt products to themselves, not the other way around.&lt;/p&gt;
+&lt;p&gt;People don’t engage in forums because forums facilitate interaction. Forums aren’t the source of interaction. People learned to use forums for interaction. While this might sound like the same thing, it’s diametrically opposite from a product development perspective. Instead of inventing a new function to keep users engaged, we must allow users to adapt the product to more of their existing habits. Only then will they use it more frequently.&lt;/p&gt;
+&lt;p&gt;Words are incredibly important. How we talk about something can reveal a lot. For example, a good marker of incorrect attitudes toward research is the phrase &amp;ldquo;Let the users say what’s better.&amp;rdquo; Just like with a cocktail, we expect that if we ask the question in the right way, people will say &amp;ldquo;It should be thicker,&amp;rdquo; after which we immediately take this to development. And there it is — innovation, growth in metrics, new markets. But in reality, such a direct process doesn&amp;rsquo;t exist.&lt;/p&gt;
+&lt;p&gt;Our business task goes through a long and painful process of operationalization. The same happens in reverse — observations turn into insights, insights into conclusions, conclusions into decisions. We do not ask users what we should do and how. By studying people, we identify actions in which using our product can simplify their execution with minimal cost to the user, and each person may have different costs. This is why we conduct research. Reflecting on and understanding why I use my phone instead of a remote control only became possible because, as a researcher, I can look at my behavior from different perspectives. This is my primary skill and bread. And it would be strange to expect such reflexivity from people who don&amp;rsquo;t engage in studying others&amp;rsquo; behavior in their work. By expecting users to reflect on their use of digital products, we are shifting the work of researchers and product owners onto them.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In the everyday understanding of JTBD, this very important nuance is lost. Perhaps because the dichotomy &amp;ldquo;function/work&amp;rdquo; is not the best language to describe what’s happening. We think we are working directly with opinions, whereas we need to study behavior. This is where sociology comes to our aid. To come up with a quality innovation, we must study actions, many of which users do not reflect upon. This requires a new perspective for product research.&lt;/p&gt;
+&lt;h2 id=&#34;research-perspective-and-descriptive-language&#34;&gt;Research Perspective and Descriptive Language&lt;/h2&gt;
+&lt;p&gt;Bruno Latour and his “Reassembling the Social” significantly altered many people’s understanding of how we should study and describe society and processes within it. Latour talks a lot about how we should map the social landscape. In Actor-Network Theory, the subjects of society become not only people but also everything around them.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Is there a big or small difference between a woman driving, slowing down near a school when seeing a yellow &amp;ldquo;no more than 30 mph&amp;rdquo; sign, and a driver slowing down to avoid damaging his car&amp;rsquo;s suspension, which is at risk of hitting a &amp;ldquo;speed bump for speedsters&amp;rdquo;? The difference is big because the first is motivated by morality, symbols, road signs, the yellow color, and the second by the same list, with the addition of a thoughtfully placed concrete slab. But the difference is small because both are obeying something: the first is obeying infrequently manifested altruism: if she hadn’t slowed down, her conscience would be tormented by the moral law; the second is obeying considerable self-interest: if he hadn’t slowed down, his car&amp;rsquo;s suspension would have been damaged by the concrete slab. Should we say here that only the first attitude is social, moral, or symbolic, while the second is objective and material? No. But if we say both attitudes are social, how can we justify the difference between moral behavior and suspension springs? Relations may not be social throughout the whole process, but they are certainly brought together or connected by the engineers who designed the road. One cannot call themselves a sociologist and follow only certain relationships — moral, legal, and symbolic — stopping as soon as some physical relation is involved. That would make any research impossible.&lt;br&gt;
+&lt;em&gt;– B. Latour, “Reassembling the Social. An Introduction to Actor-Network Theory”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We must not lose sight of anything. Every little thing, like a trash bin or a door, can influence our practices and behavior. As researchers in digital products, we must study how people produce their practices, and in our perspective, digital products and devices must be treated as subjects of interaction just like people.&lt;/p&gt;
+&lt;p&gt;At the beginning of my article, I mentioned that it’s easier for me to turn on the heater in my bedroom with my phone because I’m usually already holding it and don’t want to switch my attention to the remote control lying nearby. It seems like a logical conclusion — the closer the objects to each other, the easier it is for us to interact with them. But that&amp;rsquo;s not true!&lt;/p&gt;
+&lt;p&gt;Consider the reverse example. When I need to quickly switch between two browser tabs, I separate them into two different windows. It seems like switching windows is an extra operation, but tabs were invented to avoid wasting time switching between windows. However, I already switch between windows constantly, and the &amp;ldquo;alt+tab&amp;rdquo; combination is ingrained in my subconscious, so it&amp;rsquo;s faster for me to switch between two windows than between two tabs in the same window. Describing this pattern would be impossible without understanding the system&amp;rsquo;s properties and how switching happens. Hotkeys and how they work are also a part of the interaction. I use this feature not because it is more convenient in a vacuum, but because it better fits into my usual pattern of computer use in this specific operation.&lt;/p&gt;
+&lt;p&gt;To properly use this perspective, we also need a slightly different approach to research. Among product researchers, it is largely understood, so much so that it seems obvious to us. But I think it’s important to say it again. The main method in our work is not interviews, but observation. Even when we talk to someone, we observe their responses and make conclusions based on our observations. The same applies to JTBD. The milkshake case is possible not because we asked the clients correctly, and the clients answered correctly. It became possible only due to a clear and, most importantly, detailed description of the pre-work snack practice. This description wouldn’t have been possible without observation, and in the description of this case, it’s evident — first, the specialists stood in the parking lot and observed who bought what and in what situation. Then they talked to people to understand why it happened that way. The best JTBD research, the best research for innovation — is observation.&lt;/p&gt;
+&lt;h2 id=&#34;future-perspectives&#34;&gt;Future Perspectives&lt;/h2&gt;
+&lt;p&gt;Ideally, it would make sense to turn to the more academic environment here. Because ethnomethodology of digital product use would be incredibly useful. But unfortunately, there aren’t many works on this subject. Digital ethnography is now more focused on analyzing digital artifacts of human activity, not on how they produce that activity. Therefore, we will likely have to reflect on the experience of using digital products ourselves through the lens of Actor-Network Theory. This is what I encourage everyone to do.&lt;/p&gt;
+&lt;p&gt;Let’s strive to map our users&#39; practices as thoroughly as Latour advises. The process of using a digital product is very complex and multifaceted, yet we are currently oversimplifying it. And the chain &amp;ldquo;find an image on Google, copy it, clean it from watermarks, crop it in Photoshop, then insert it into a PowerPoint presentation&amp;rdquo; turns into &amp;ldquo;add an image to the presentation.&amp;rdquo; It is in the detailed study and description of the practices of using digital devices and products that lies the key to creating successful innovations. Detailed descriptions of practices are key to successful exploratory research.&lt;/p&gt;
+&lt;p&gt;As long as we continue to perceive our research simplistically and innovation as a revolution, we will be doomed to develop our products literally by trial and error. This isn’t necessarily a bad thing, especially given that modern development frameworks now aim to reduce the cost of failure. But if we are to engage in research, let’s do it as effectively as possible. The more observational elements there are in our research work, the more useful our insights will be. The more the approach to innovation is focused not on producing a revolution but on embedding our product into familiar patterns, the more useful our products will become.&lt;/p&gt;
+&lt;p&gt;If you liked the article, feel free to share it, leave your comments and feedback at &lt;a href=&#34;mailto:mail@uxrozum.com&#34;&gt;mail@uxrozum.com&lt;/a&gt;, or on &lt;a href=&#34;t.me/keycee&#34;&gt;telegram&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

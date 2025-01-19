@@ -1,0 +1,1046 @@
+<!DOCTYPE html><html lang="ru" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.0.0-beta.2 for Hugo" />
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Сережа Розум" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Почему это так? Почему это важно?" />
+
+  
+  <link rel="alternate" hreflang="ru" href="/ru/post/custdev-and-jtbd/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#7FBBA0" />
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.ac1319ffc611c3fe1c721a0af0a128ba.css" />
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HYQ5BWL319"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-HYQ5BWL319', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/ru/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_180x180_fill_lanczos_center_2.png" />
+
+  <link rel="canonical" href="/ru/post/custdev-and-jtbd/" />
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Rozum S, UXR" />
+  <meta property="og:url" content="/ru/post/custdev-and-jtbd/" />
+  <meta property="og:title" content="Custdev и JTBD– это не методы исследований. | Rozum S, UXR" />
+  <meta property="og:description" content="Почему это так? Почему это важно?" /><meta property="og:image" content="/ru/post/custdev-and-jtbd/featured.png" />
+    <meta property="twitter:image" content="/ru/post/custdev-and-jtbd/featured.png" /><meta property="og:locale" content="ru" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-07-19T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-07-19T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/ru/post/custdev-and-jtbd/"
+  },
+  "headline": "Custdev и JTBD– это не методы исследований.",
+  
+  "image": [
+    "/ru/post/custdev-and-jtbd/featured.png"
+  ],
+  
+  "datePublished": "2021-07-19T00:00:00Z",
+  "dateModified": "2021-07-19T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Сережа Розум"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rozum S, UXR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Почему это так? Почему это важно?"
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+<script src="/js/language-redirect.js"></script>
+
+  <title>Custdev и JTBD– это не методы исследований. | Rozum S, UXR</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.0475bc389b7599ef6b1889ad17c11742.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Поиск</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Поиск ..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Поиск ...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/ru/">Rozum S, UXR</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Переключить навигацию">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/ru/">Rozum S, UXR</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ru/#about"><span>Обо мне</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/ru/post"><span>Статьи</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ru/project"><span>Проекты</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+
+      
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>Custdev и JTBD– это не методы исследований.</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jul 19, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 мин. для прочтения
+  </span>
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 405px;">
+  <div style="position: relative">
+    <img src="/ru/post/custdev-and-jtbd/featured_huf38fb9a067093534f3922dce49a8f5a7_2779098_720x0_resize_lanczos_2.png" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>«Сходить покастдевить», «Нам нужно JTBD-исследование» — часто слышите такое? Когда мы говорим о методах исследований, в современном мире продуктовых исследований нас ждет плеяда разных интересных методов и серебряных пуль.</p>
+<p>При этом выбор метода оказывается нетривиальной задачей. И правда, что лучше — провести глубинные интервью или заняться кастдевом, накидать JTBD-канвас или построить персоны? Глаза разбегаются.</p>
+<p>Вокруг полно разных курсов, методичек, видео и книг. Каждая обещает научить проводить исследования, быстро и легко. Но здесь кроется один очень важный и не всем очевидный момент.</p>
+<p><strong>Customer Development — это не метод исследований, Jobs To Be Done — это не метод исследований. Это исследовательские фреймворки.</strong></p>
+<h2 id="почему-это-так">Почему это так?</h2>
+<p>Сначала давайте разберемся с тем, что такое метод исследования.</p>
+<p>Любое исследование начинается с исследовательского вопроса. Исследовательский вопрос — штука довольно конкретная, и относительно низкоуровневая. Например, «Какие проблемы возникают у людей при создании подкастов?» или «Какой продукт для просмотра видео на android — самый популярный?».</p>
+<p>Исследовательский метод — это способ ответить на этот вопрос. Он включает в себя метод сбора информации (например, интервью или опрос, а может быть этнографическое наблюдение) и метод анализа информации (например, тематический анализ, или дескриптивная статистика). От исследовательского вопроса и наших возможностей зависит выбранный метод, разные методы дают разные по своим характеристикам исходные данные, и уже в зависимости от свойств данных можно выбирать метод анализа. К этой паре мы можем подключить еще метод визуализации наших результатов (к ним, кстати, относится CJM, которое некоторые тоже считают методом исследования). Эта совокупность практик работает в рамках одного исследовательского вопроса.</p>
+<p>Но помимо точечных вопросов перед владельцем продукта встает один, главный вопрос: «Как сделать популярный и полезный продукт, который будет приносить прибыль?». Необязательно финансовую прибыль, в нашем контексте это не суть важно. Самое важное здесь то, что одним исследованием на этот вопрос не ответить — нам нужен постоянный процесс поиска новой информации.</p>
+<p>И тут нам на помощь и приходят исследовательские фреймворки. Основная задача которых и ответить на вопрос «Как сделать этот самый крутой продукт?». <strong>Если одно исследование — это тактика, то работа в рамках фреймворка — это стратегия. В идеале фреймворк с нами с самого начала идеи создать продукт до самого последнего пользователя. При этом они включают в себя и качественные и количественные части, то есть предлагают нам охватить как можно больше различных методов, чтобы получить максимальный охват знаний о наших пользователях.</strong></p>
+<p>Для иллюстрации этой мысли я сделал небольшую (и очень неполную) схему понятий, с которыми мы сталкиваемся, когда говорим об исследовательском процессе:</p>
+<p><img src="1.webp" alt="&ldquo;Poster&rdquo;"></p>
+<p>Полноразмерную версию можно посмотреть <a href="https://github.com/UXRozum/UX-Methods-Scheme/blob/main/Product_research_scheme.pdf" target="_blank" rel="noopener">на моем гитхабе</a>.</p>
+<h2 id="почему-это-важно">Почему это важно?</h2>
+<p>Из разделения методов исследований и фреймворков исходит несколько очень важных следствий</p>
+<h4 id="следствие-1-методы-сбора-данных-дополняют-друг-друга">Следствие 1: методы сбора данных дополняют друг друга</h4>
+<p>В русскоязычном интернете тот же кастдев стал синонимом глубинного интервью. На самом деле, это не обязательно так. Можно и нужно собирать данные из разных источников. Не только глубинки с пользователями, но и общение с экспертами, анализ открытых источников, опросы и прямое наблюдение — все это подходит для процесса постоянного изучения пользователей. Классический кейс из JTBD с милкшейками почему-то забывают, и сломя голову идут на амбразуру интервью. А ведь в нем исследователи сначала наблюдали за тем, что и как заказывают клиенты. Пользуйтесь всеми возможными способами лучше понять своих пользователей</p>
+<h4 id="следствие-2-jtbd-или-custdev--это-не-только-качественные-методы">Следствие 2: JTBD или Custdev — это не только качественные методы</h4>
+<p>Если мы работаем только качественно, то мы теряем более широкую перспективу. Наши знания о пользователе будут глубокие, но не генерализируемые. Наш product/market fit будет крайне условным, мы не сможем до релиза хотя бы примерно предсказывать, какие результаты мы получим. Поэтому оба этих фреймворка содержат в себе и качественные и количественные методы. Важно не только найти интересный инсайт, но и завалидировать его количественно. Пока у нас cutsdev — синоним глубинки, мы будем забывать добрую половину необходимых активностей.</p>
+<h4 id="следствие-3-исследование--это-не-разовая-активность-это-постоянный-процесс">Следствие 3: исследование — это не разовая активность, это постоянный процесс</h4>
+<p>Для создания хорошего продукта не надо однажды собраться всей командой и «пойти в народ», или засесть в одной переговорке на двухдневную сессию дизайн-мышления. Это так не работает, любой исследовательский фреймворк регулирует полностью создание и поддержку продукта. Начиная от продуктовой идеи и заканчивая анализом уже функционирующего продукта. Если такие активности проводятся эпизодически, разово, то пользы от них уже не так много.</p>
+<p>В заключение хочу сказать, что все это — моё личное мнение. И основано в основном на моем личном опыте. Я могу быть неправ, могу ошибаться. Если вы не согласны — пишите, обратная связь всегда важна и полезна!</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/ru/tag/custdev/">Custdev</a>
+  
+  <a class="badge badge-light" href="/ru/tag/jtbd/">JTBD</a>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/ru/author/%D1%81%D0%B5%D1%80%D0%B5%D0%B6%D0%B0-%D1%80%D0%BE%D0%B7%D1%83%D0%BC/avatar_hu5b84e11c0a5bed4bec46c4f2fb26b9bd_94813_270x270_fill_q75_lanczos_center.jpg" alt="Сережа Розум">
+    
+
+    <div class="media-body">
+      <h5 class="card-title">Сережа Розум</h5>
+      <h6 class="card-subtitle">UX-исследователь, социолог</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:mail@uxrozum.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/sergey-rozum/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.t.me/keycee" target="_blank" rel="noopener">
+        <i class="fab fa-telegram"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    2025
+  </p>
+
+  
+  
+
+
+
+
+
+
+ <p class="powered-by">
+  
+  </p> 
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Процитировать</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Копия
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Скачать
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+        <div class="search-hit-content">
+          <div class="search-hit-name">
+            <a href="{{relpermalink}}">{{title}}</a>
+            <div class="article-metadata search-hit-type">{{type}}</div>
+            <p class="search-hit-description">{{snippet}}</p>
+          </div>
+        </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/ru/js/wowchemy.min.7381a7f963f52208b466b798604a8553.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="/js/language-redirect.js"></script>
+
+
+
+
+</body>
+</html>

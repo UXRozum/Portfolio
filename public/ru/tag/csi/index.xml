@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CSI | Rozum S, UXR</title>
+    <link>/ru/tag/csi/</link>
+      <atom:link href="/ru/tag/csi/index.xml" rel="self" type="application/rss+xml" />
+    <description>CSI</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>ru</language><copyright>2025</copyright><lastBuildDate>Tue, 09 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_512x512_fill_lanczos_center_2.png</url>
+      <title>CSI</title>
+      <link>/ru/tag/csi/</link>
+    </image>
+    
+    <item>
+      <title>Швейцарский Исследовательский Эксельбук</title>
+      <link>/ru/project/swiss-excelbook/</link>
+      <pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>/ru/project/swiss-excelbook/</guid>
+      <description>&lt;p&gt;Швейцарский исслежовательский эксельбук — это универсальный инструмент для UX-исследователей и аналитиков, предоставляющий готовую Excel-таблицу с предустановленными формулами и визуализациями. Этот инструмент позволяет быстро рассчитывать ключевые UX-метрики, анализировать результаты исследований и визуализировать данные без необходимости использования сложных программ или скриптов.&lt;/p&gt;
+&lt;h2 id=&#34;зачем-он-нужен&#34;&gt;Зачем он нужен?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Экономия времени. Вам не нужно настраивать формулы или создавать диаграммы вручную. Всё уже подготовлено, чтобы вы могли сосредоточиться на анализе.&lt;/li&gt;
+&lt;li&gt;Доступность. Используется только Excel, без макросов, не нужно устанавливать дополнительные инструменты или бодаться с вашей службой безопасности.&lt;/li&gt;
+&lt;li&gt;Гибкость. Вы можете адаптировать таблицу под свои исследования и задачи.
+Универсальность. Подходит для работы с данными опросов, тестирования юзабилити и других UX-методов.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;возможности&#34;&gt;Возможности&lt;/h2&gt;
+&lt;h3 id=&#34;легкий-расчет-метрик&#34;&gt;Легкий расчет метрик&lt;/h3&gt;
+&lt;p&gt;Просто вставьте подготовленные данные в таблицу (ориентируясь на инструкцию), дальше она сама все посчитает&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;SUM.gif&#34; alt=&#34;using SRE&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;куча-различных-метрик&#34;&gt;Куча различных метрик&lt;/h2&gt;
+&lt;p&gt;What calculators are already available&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SUM (Single Usability Metric)&lt;/strong&gt; - единая метрика для измерения юзабилити&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;UMUX (Usability Metric for User Experience)&lt;/strong&gt; - опросник для измерения юзабилити продукта&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;CES (Customer Effort Score)&lt;/strong&gt; - оценка сложности конкретного действия&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;NPS (Net Promoter Score)&lt;/strong&gt; - индекс потребительской лояльности&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;CSI (Customer Satisfaction Score)&lt;/strong&gt; - индекс удовлетворенности продуктом&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ODI (Outcome Driven Innovation)&lt;/strong&gt; - определение значимости job statement в рамках JTBD и подхода outcome driven innovation (подход Ульвика)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Kano model&lt;/strong&gt; - модель для оценки влияния определенных аттриубтов (фич) продукта на удовлетворенность этим продуктом&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;PSM (Price Sensitivity Meter)&lt;/strong&gt; - четыре вопроса для выявления оптимальной цены продукта&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;графики-для-каждой-метрики&#34;&gt;Графики для каждой метрики&lt;/h2&gt;
+&lt;p&gt;Для каждой метрики генерируются графики, чтобы можно было их красиво вставить в презентацию с результатами&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;CSI.gif&#34; alt=&#34;Plots&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;бенчмарки&#34;&gt;Бенчмарки&lt;/h2&gt;
+&lt;p&gt;Там где возможно, для метрик на графике размечены бенчмарки для упрощения анализа&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;SUS.gif&#34; alt=&#34;Benchmarks&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;как-оно-работает&#34;&gt;Как оно работает?&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Скачиваете табличку&lt;/li&gt;
+&lt;li&gt;Выбираете вкладку с нужной метрикой&lt;/li&gt;
+&lt;li&gt;Вставляете чищенные данные туда по готовому шаблону&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;В файле есть подробная инструкция по использованию, пример кодов данных и немножко заметок по работе с каждой метрикой&lt;/p&gt;
+&lt;p&gt;Скачать Швейцарский Исследовательский Эксельбук можно &lt;a href=&#34;https://github.com/UXRozum/Swiss_Excelbook&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;здесь&lt;/a&gt;!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

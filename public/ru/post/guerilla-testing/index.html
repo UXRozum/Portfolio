@@ -1,0 +1,1081 @@
+<!DOCTYPE html><html lang="ru" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.0.0-beta.2 for Hugo" />
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Сережа Розум" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Коридорки done right" />
+
+  
+    <link rel="alternate" hreflang="en" href="/en/post/guerilla-testing/" />
+  
+  <link rel="alternate" hreflang="ru" href="/ru/post/guerilla-testing/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#7FBBA0" />
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.ac1319ffc611c3fe1c721a0af0a128ba.css" />
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HYQ5BWL319"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-HYQ5BWL319', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/ru/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_180x180_fill_lanczos_center_2.png" />
+
+  <link rel="canonical" href="/ru/post/guerilla-testing/" />
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Rozum S, UXR" />
+  <meta property="og:url" content="/ru/post/guerilla-testing/" />
+  <meta property="og:title" content="Коридорные исследования — как не выстрелить себе в ногу | Rozum S, UXR" />
+  <meta property="og:description" content="Коридорки done right" /><meta property="og:image" content="/ru/post/guerilla-testing/featured.png" />
+    <meta property="twitter:image" content="/ru/post/guerilla-testing/featured.png" /><meta property="og:locale" content="ru" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-09-17T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-09-17T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/ru/post/guerilla-testing/"
+  },
+  "headline": "Коридорные исследования — как не выстрелить себе в ногу",
+  
+  "image": [
+    "/ru/post/guerilla-testing/featured.png"
+  ],
+  
+  "datePublished": "2021-09-17T00:00:00Z",
+  "dateModified": "2021-09-17T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Сережа Розум"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rozum S, UXR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Коридорки done right"
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+<script src="/js/language-redirect.js"></script>
+
+  <title>Коридорные исследования — как не выстрелить себе в ногу | Rozum S, UXR</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.0475bc389b7599ef6b1889ad17c11742.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Поиск</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Поиск ..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Поиск ...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/ru/">Rozum S, UXR</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Переключить навигацию">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/ru/">Rozum S, UXR</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ru/#about"><span>Обо мне</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/ru/post"><span>Статьи</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ru/project"><span>Проекты</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+
+      
+      
+
+      
+      <li class="nav-item dropdown i18n-dropdown">
+        <a href="#" class="nav-link " data-toggle="dropdown"
+           aria-haspopup="true" aria-label="Languages">
+          <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+        <div class="dropdown-menu">
+          <div class="dropdown-item dropdown-item-active">
+            <span>Русский</span>
+          </div>
+          
+          <a class="dropdown-item" href="/en/post/guerilla-testing/">
+            <span>English</span>
+          </a>
+          
+        </div>
+      </li>
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>Коридорные исследования — как не выстрелить себе в ногу</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Sep 17, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 мин. для прочтения
+  </span>
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 405px;">
+  <div style="position: relative">
+    <img src="/ru/post/guerilla-testing/featured_hu0d54476f18ce3da89ffb71c8ce751650_3479036_720x0_resize_lanczos_2.png" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Коридорное тестирование — спорная штука. Многие исследователи не любят их, и на это есть причины.</p>
+<p>Коридорки очень поверхностны, у тебя нет времени поговорить с человеком достаточно долго. О хоть сколько-нибудь репрезентативной выборке можно и не мечтать, целевая аудитория редко ходит по офису.</p>
+<p>Размер выборки мал из-за ограничений формата, о чем-то более-менее серьезном у тебя нет возможности спросить.</p>
+<p>Но все равно, есть люди, которые их делают. Почему? Потому что это быстро, просто, дает тебе иллюзию информированности. Вроде и народ поспрашивал, и мнение послушал — чем тебе не исследование?</p>
+<p>От коридорок нам никуда не уйти, но мы, как исследователи, можем дать коллегам несколько советов о том, как их сделать хоть сколько-нибудь полезными. Я подготовил 12 карточек с советами, которые помогут сгладить большинство отрицательных сторон коридорных тестов.</p>
+<h2 id="раздел-1-цели-и-задачи-коридорок">Раздел 1: цели и задачи коридорок</h2>
+<p><img src="1.webp" alt="Цели и задачи">
+В первую очередь стоит разобраться с тем, в чем вообще может быть польза от коридорок. Больше про целевую аудиторию мы от них не узнаем. Какое-либо мнение, проблемы пользователей, запросы на фичи — ничего из этого мы не вытащим. Однако, мы можем проверить интерфейс приложения — а нет ли там очевидно неудачных решений?</p>
+<p>Даже если человек не наша целевая аудитория, непонимание им интерфейса может служить для нас сигналом: “Ага, тут что-то не так, надо бы это поправить”. Ограничение тут — профессиональные продукты, использование которых подразумевает наличие у человека специальных знаний и образования. Коридоркой интерфейс атомной станции мы не протестируем. А вот приложение для потребления контента — можем.</p>
+<p>Отдельно хотелось бы сказать про тексты. С одной стороны, мы можем пощупать восприятие текстовок и терминов. С другой стороны — здесь нам надо еще сильнее следить за тем, чтобы текст не оказался специализированным. Если наша задача — сделать текст понятным для всех — можно попробовать. Если нет — то лучше отказаться от коридорных тестов.</p>
+<h2 id="раздел-2-как-отбирать-респондентов">Раздел 2: как отбирать респондентов</h2>
+<p><img src="2.webp" alt="Респонденты"></p>
+<p>Конечно, выборка у нас в любом случае будет стихийной. Но все равно нам стоит учитывать некоторые вещи.</p>
+<p>В первую очередь, очевидно, не стоит спрашивать тех, кто имеет хоть какое-то отношение к тестируемому продукту. Наша задача — найти тех, кто никогда его не видел, не участвовал в обсуждении, идеально конечно, чтобы не знал о его существовании. Нам нужно найти тех, у кого еще не замыленны глаза нашим продуктом, свежий взгляд. Так что собственную команду можем не доставать.</p>
+<p>При этом, ротация респондентов никуда не уходит. Стараемся не спрашивать одного человека дважды, даже если это разные прототипы. Заведение любимчиков среди респондентов не приводит ни к чему хорошему, какое бы исследование это ни было.</p>
+<p>Идеально, конечно, было бы поспрашивать людей, которые никак не относятся ко всей этой нашей ойти индустрии. Уброрщики и уборщицы, охранники и охранницы, любой “обслуживающий” персонал — идеально для нас. С другой стороны спектра дизайнеры и менеджмент — они постоянно видят различные интерфейсы, тут слишком высок шанс, что человек уже достаточно насмотрен, чтобы разобраться в чем угодно.</p>
+<p>Лично я буду плохим респондентам — за время своей работы мне приходилось разбираться в продуктах настолько чудовищных, что я уже выработал у себя навык понимания любых возможных интерфейсных решений :)</p>
+<h2 id="раздел-3-формулировка-заданий">Раздел 3: формулировка заданий</h2>
+<p><img src="3.webp" alt="Задания"></p>
+<p>Коридорку легко спутать с количественником — ведь легко посчитать ответы и прийти к выводу, что один интерфейс лучше другого. На деле это не так, мы не можем сравнивать результаты тестов. Хоть оно и выглядит как количественный опрос, инсайты тут будут исключительно качественные — потенциальные юзабилити проблемы, на которые стоит обратить внимание. Поэтому давайте не сравнивать прототипы лоб в лоб, это и на полноразмерном юзабилити-тесте не очень хорошая практика.</p>
+<p>У нас нет возможности погрузить человека в контекст тестирования, мы не можем долго рассказывать про наши цели, заморачиваться с айс-брейкерами тоже нет времени. Поэтому и задание5 должно быть максимально коротким и понятным. Как при удаленных юзабилити-тестах, но только еще короче и понятнее.</p>
+<p>Ну и стандартные требования к вопросам в исследовании никуда не уходят. Не указываем на правильный ответ, не задаем “да/нет” вопросы. Сохраняем нейтральность и всегда имеем в виду социально одобряемые ответы — мало кто захочет обижать коллегу.</p>
+<h2 id="раздел-4-проведение-тестирования">Раздел 4: проведение тестирования</h2>
+<p><img src="4.webp" alt="Тестировани"></p>
+<p>У коридорных исследований строгие временные рамки. Мы не можем сильно отвлекать народ от работы. Поэтому не рекомендуется давать много заданий для одного респондента. Идеальная коридорка состоит из 1–2 заданий.</p>
+<p>Как я уже говорил, цифры в коридорке считать бесполезно. Как говорится, тебе не нужно ждать, пока сотня машин проедет по канаве на дороге, чтобы понять, что ее нужно заделать. Если мы видим повторение неправильного ответа, мы можем сказать две вещи:</p>
+<ul>
+<li>
+<p>Существуют люди, которым что-то непонятно</p>
+</li>
+<li>
+<p>Это не уникальный случай, таких людей точно больше одного</p>
+</li>
+</ul>
+<p>А это уже тревожные звоночки и дополнительные аргументы к доработке решения.</p>
+<p>Ну и да, показывать десктопные приложения на мобилке не стоит. Можно, конечно носиться с распечатками, но идеальный вариант — показывать интерфейс на том устройстве, на котором он будет использоваться в реальной жизни.</p>
+<h2 id="в-заключение">В заключение</h2>
+<p>Спасибо за то, что дочитали статью до конца, надеюсь вам понравилось. Современные методы разработки продуктов заставляют нас использовать быстрые и дешевые методы. Но скорость и дешевизна обычно несут за собой минусы — м получаем меньше информации, можем делать меньше выводов. Выводам этим мы можем меньше доверять. Здесь самое важное, на мой взгляд — четко понимать границы того, что мы делаем. Иначе мы рискуем сильно ошибиться.</p>
+<p>Пдф с карточками на русском и английском языках можно скачать <a href="https://github.com/UXRozum/Hall-tests" target="_blank" rel="noopener">на моем гитхабе</a>.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/ru/tag/%D1%8E%D0%B7%D0%B0%D0%B1%D0%B8%D0%BB%D0%B8%D1%82%D0%B8-%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">Юзабилити-тестирование</a>
+  
+  <a class="badge badge-light" href="/ru/tag/%D0%BA%D0%BE%D1%80%D0%B8%D0%B4%D0%BE%D1%80%D0%BD%D1%8B%D0%B5-%D1%82%D0%B5%D1%81%D1%82%D1%8B/">Коридорные тесты</a>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/ru/author/%D1%81%D0%B5%D1%80%D0%B5%D0%B6%D0%B0-%D1%80%D0%BE%D0%B7%D1%83%D0%BC/avatar_hu5b84e11c0a5bed4bec46c4f2fb26b9bd_94813_270x270_fill_q75_lanczos_center.jpg" alt="Сережа Розум">
+    
+
+    <div class="media-body">
+      <h5 class="card-title">Сережа Розум</h5>
+      <h6 class="card-subtitle">UX-исследователь, социолог</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:mail@uxrozum.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/sergey-rozum/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.t.me/keycee" target="_blank" rel="noopener">
+        <i class="fab fa-telegram"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    2025
+  </p>
+
+  
+  
+
+
+
+
+
+
+ <p class="powered-by">
+  
+  </p> 
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Процитировать</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Копия
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Скачать
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+        <div class="search-hit-content">
+          <div class="search-hit-name">
+            <a href="{{relpermalink}}">{{title}}</a>
+            <div class="article-metadata search-hit-type">{{type}}</div>
+            <p class="search-hit-description">{{snippet}}</p>
+          </div>
+        </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/ru/js/wowchemy.min.7381a7f963f52208b466b798604a8553.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="/js/language-redirect.js"></script>
+
+
+
+
+</body>
+</html>

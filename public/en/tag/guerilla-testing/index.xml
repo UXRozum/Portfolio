@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guerilla Testing | Rozum S, UXR</title>
+    <link>/en/tag/guerilla-testing/</link>
+      <atom:link href="/en/tag/guerilla-testing/index.xml" rel="self" type="application/rss+xml" />
+    <description>Guerilla Testing</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>2025</copyright><lastBuildDate>Fri, 17 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu19a1120d39a533b4446980715d7e8190_15602_512x512_fill_lanczos_center_2.png</url>
+      <title>Guerilla Testing</title>
+      <link>/en/tag/guerilla-testing/</link>
+    </image>
+    
+    <item>
+      <title>Guerilla Testing — How Not to Shoot Yourself in the Foot</title>
+      <link>/en/post/guerilla-testing/</link>
+      <pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>/en/post/guerilla-testing/</guid>
+      <description>&lt;p&gt;Guerilla testing is a controversial topic. Many researchers dislike it, and for good reasons.&lt;/p&gt;
+&lt;p&gt;Guerilla tests are very superficial—you don’t have the time to talk to a person long enough. You can forget about a remotely representative sample, and the target audience rarely walks around the office.&lt;/p&gt;
+&lt;p&gt;The sample size is small due to format limitations, and you don’t have the opportunity to ask about anything even moderately complex.&lt;/p&gt;
+&lt;p&gt;Still, some people continue to use it. Why? Because it’s quick, simple, and gives you the illusion of being informed. It feels like you’ve talked to people, listened to opinions—what’s not to like?&lt;/p&gt;
+&lt;p&gt;We can’t completely avoid guerilla testing, but as researchers, we can provide our colleagues with advice on making it at least somewhat useful. I’ve prepared 12 cards with tips to help smooth out most of the downsides of guerilla tests.&lt;/p&gt;
+&lt;h2 id=&#34;section-1-goals-and-objectives-of-guerilla-testing&#34;&gt;Section 1: Goals and Objectives of Guerilla Testing&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;1.png&#34; alt=&#34;Goals and Objectives&#34;&gt;&lt;/p&gt;
+&lt;p&gt;First, let’s clarify what value guerilla tests can actually provide. We won’t learn more about the target audience. We can’t extract opinions, user problems, or feature requests from them. However, we can test the application’s interface to see if there are any obvious design flaws.&lt;/p&gt;
+&lt;p&gt;Even if the person isn’t part of our target audience, their misunderstanding of the interface can signal to us: “Aha, something’s wrong here; we should fix it.” The exception is professional products that require specialized knowledge or education to use. Guerilla testing won’t work for a nuclear power plant interface. But for a content consumption app? Absolutely.&lt;/p&gt;
+&lt;p&gt;Text is a special case. On one hand, we can test the perception of phrases and terms. On the other hand, we must be extra careful to avoid specialized text. If our goal is to make the text understandable for everyone, it’s worth trying. If not, it’s better to skip guerilla testing.&lt;/p&gt;
+&lt;h2 id=&#34;section-2-selecting-respondents&#34;&gt;Section 2: Selecting Respondents&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;2.png&#34; alt=&#34;Respondents&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Our sample will inevitably be ad hoc, but there are still some things to consider.&lt;/p&gt;
+&lt;p&gt;First, obviously, don’t test on anyone who has any connection to the product being tested. Our goal is to find people who have never seen it, never participated in discussions, and ideally don’t even know it exists. We need fresh eyes, so we can skip our own team.&lt;/p&gt;
+&lt;p&gt;Respondent rotation remains important. Avoid testing the same person twice, even with different prototypes. Playing favorites with respondents doesn’t lead to anything good, regardless of the study type.&lt;/p&gt;
+&lt;p&gt;Ideally, we’d test with people entirely unrelated to the tech industry. Cleaners, security staff, and other support personnel are perfect for us. At the other end of the spectrum are designers and management—they see interfaces daily and are likely too experienced to provide a fresh perspective.&lt;/p&gt;
+&lt;p&gt;Personally, I’d be a bad respondent—over the years, I’ve encountered products so poorly designed that I’ve developed a skill for understanding even the most baffling interface solutions :)&lt;/p&gt;
+&lt;h2 id=&#34;section-3-formulating-tasks&#34;&gt;Section 3: Formulating Tasks&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;3.png&#34; alt=&#34;Tasks&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Guerilla testing can easily be mistaken for quantitative research—it’s tempting to count responses and conclude one interface is better than another. In reality, it doesn’t work that way. We can’t compare test results like this. While it may look like a quantitative survey, the insights are purely qualitative—potential usability issues to watch for. So let’s not compare prototypes head-to-head; it’s not great practice even in full-scale usability tests.&lt;/p&gt;
+&lt;p&gt;We don’t have time to immerse participants in the testing context. We can’t spend time explaining our goals or using icebreakers. Therefore, tasks must be as short and clear as possible—like remote usability testing, but even more concise and straightforward.&lt;/p&gt;
+&lt;p&gt;Standard research question requirements still apply: avoid leading questions, steer clear of “yes/no” questions, maintain neutrality, and account for socially desirable answers—few people want to upset a colleague.&lt;/p&gt;
+&lt;h2 id=&#34;section-4-testing&#34;&gt;Section 4: Testing&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;4.png&#34; alt=&#34;Testing&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Guerilla testing has strict time limits. We can’t take up too much of someone’s workday. Therefore, it’s best to limit each participant to 1–2 tasks.&lt;/p&gt;
+&lt;p&gt;As mentioned, numbers don’t matter in guerilla testing. As they say, you don’t need to wait for a hundred cars to drive over a pothole to know it needs fixing. If we notice repeated incorrect responses, two things are clear:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There are people who find something confusing.&lt;/li&gt;
+&lt;li&gt;This isn’t a unique case; there are definitely more of them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These are red flags and additional arguments for improving the solution.&lt;/p&gt;
+&lt;p&gt;Oh, and yes, don’t show desktop applications on a mobile device. You could run around with printouts, but the ideal approach is to display the interface on the device it’s meant for.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Thank you for reading to the end—I hope you found this helpful. Modern product development methods push us toward fast and cheap approaches. But speed and cost-efficiency come with drawbacks: we gather less information and draw fewer conclusions. Those conclusions are less reliable. The most important thing, in my opinion, is to clearly understand the boundaries of what we’re doing. Otherwise, we risk making significant mistakes.&lt;/p&gt;
+&lt;p&gt;You can download the PDF with cards &lt;a href=&#34;https://github.com/UXRozum/Hall-tests&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;on my GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
