@@ -68,6 +68,7 @@ module:
   imports:
     - path: github.com/wowchemy/wowchemy-hugo-modules/netlify-cms-academic
     - path: github.com/wowchemy/wowchemy-hugo-modules/wowchemy
+defaultContentLanguage: 'ru'
 defaultContentLanguageInSubdir: true
 languages:
   ru:
@@ -76,9 +77,11 @@ languages:
     languageCode: ru
     languageDirection: ltr
     languageName: Russian
+    weight: 1
   en:
     contentDir: content/en
     disabled: false
     languageCode: en-US
     languageDirection: ltr
     languageName: English
+    weight: 2
