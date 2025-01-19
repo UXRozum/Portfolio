@@ -76,7 +76,6 @@ languages:
     languageCode: ru
     languageDirection: ltr
     languageName: Russian
-    weight: 0
   en:
     contentDir: content/en
     disabled: false
