@@ -3,7 +3,6 @@ title: Rozum S, UXR
 baseurl: ''
 copyright: '{year}'
 enableGitInfo: no
-defaultContentLanguage: ru
 hasCJKLanguage: no
 removePathAccents: yes
 summaryLength: 30
@@ -76,11 +75,10 @@ languages:
     languageCode: ru
     languageDirection: ltr
     languageName: Russian
-    weight: 1
+    
   en:
     contentDir: content/en
     disabled: false
     languageCode: en-US
     languageDirection: ltr
     languageName: English
-    weight: 2
