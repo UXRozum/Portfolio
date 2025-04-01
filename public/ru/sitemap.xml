@@ -4,7 +4,7 @@
   
   <url>
     <loc>/ru/</loc>
-    <lastmod>2024-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-19T18:22:44+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -14,6 +14,26 @@
                 rel="alternate"
                 hreflang="ru"
                 href="/ru/"
+                />
+  </url>
+  
+  <url>
+    <loc>/ru/post/salaryq32024/</loc>
+    <lastmod>2025-01-19T18:22:44+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ru/post/</loc>
+    <lastmod>2025-01-19T18:22:44+03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="/ru/post/"
                 />
   </url>
   
@@ -44,21 +64,6 @@
                 rel="alternate"
                 hreflang="ru"
                 href="/ru/post/ideal-usability-problem/"
-                />
-  </url>
-  
-  <url>
-    <loc>/ru/post/</loc>
-    <lastmod>2024-05-18T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="/ru/post/"
                 />
   </url>
   
